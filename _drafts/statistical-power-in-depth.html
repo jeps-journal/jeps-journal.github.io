@@ -1,0 +1,228 @@
+---
+layout: post
+title: Statistical Power in-depth
+date: 
+type: post
+published: false
+status: draft
+categories:
+- How-to
+- Research Methodology
+tags: []
+meta:
+  _edit_last: '15848'
+  editInHTML: 'off'
+author:
+  login: Fabian Dablander
+  email: dostodabsi@gmail.com
+  display_name: Fabian Dablander
+  first_name: Fabian
+  last_name: Dablander
+---
+<h2>Introduction</h2>
+<p>After defining statistical power, I will discuss the following points using accompanying R code:</p>
+<p>  - How to compute power<br />
+  - Implications of low power<br />
+  - Relation between power and the p-value<br />
+  - Why power can't help you accept the null hypothesis</p>
+<h2>Defining Statistical Power</h2>
+<p>Power describes the probability of finding a true effect, given that there really is one; it is $1 - \beta$, where $\beta$ is the false negative rate. If your experiment thus has 50% power, your chances of finding a true effect, given that there really is one, is only a toin coss! It might be surprising to hear that the average psychological experiment is powered much lower - at about 30% [@cohen1962statistical; @sedlmeier1989studies; @maxwell2004persistence; @fraley2014n]. In neuroscience, power is even lower - being around 18% [@button2013power]. Before we discuss the implications of this in the following sections, let us expand on power a bit more.</p>
+<p>To compute power, we have to think about the probability of the data under the alternative hypothesis H1. We need to rely on non-central distributions. </p>
+<p>Often, power is illustrated with to overlapping distributions, like the seen below:</p>
+<pre class="theme:familiar toolbar:2 lang:r decode:true ">
+library('ggplot2')
+
+zcrit <- qnorm(0.975)
+central <- function(x) dnorm(x, mean = 0, sd = 1)
+noncentral <- function(x) dnorm(x, mean = 3, sd = 1)
+
+ggplot(data.frame(x = c(-3, 6)), aes(x)) +
+     labs(x = "values", y = "density") +
+     stat_function(fun = central, aes(colour="H0")) +
+     stat_function(fun = noncentral, aes(colour="H1")) + 
+     scale_colour_manual("Hypotheses",
+                         breaks=c("H0","H1"),
+                         values=c("blue","green")) +
+     geom_vline(xintercept = zcrit, col = "red", linetype = "dashed") +
+     theme_classic()
+</pre>
+<p><a href="http://blog.efpsa.org/wp-content/uploads/2015/03/power.png"><img src="{{ site.baseurl }}/assets/power-300x241.png" alt="power" width="300" height="241" class="alignnone size-medium wp-image-3375" /></a></p>
+<p>The horizontal red line describes the critical z-value $z_{crit}$. H1 is described by the probability distribution for which $\mu \neq 0$. Visually, power is the area under the green curve which is above the horizontal red line. Conversely, the area below $z_{crit}$ is the $\beta$ error.</p>
+<p>The parameter which governs the location of the probability distribution under H1 (the green curve) is the <strong>non-centrality parameter</strong>. For normal distributions, the non-centrality parameter is the mean.</p>
+<p>Note that the difference between the two distributions is a measure of effect size. For example, if the blue curve describes the height of women and the green curve the height of men, we can see that the greater the difference between the to curves, the larger the difference in height. It is also straightforward to see that when we <strong>hold the sample size constant</strong>, higher power means a stronger effect.</p>
+<p>It is intuitive that a large sample size will increase power. After all, a larger sample means less sampling error, thus more precision which leads to an increased probability of finding an effect if there really is one.</p>
+<p>As we can see, there is an intricate relation between power, effect size, sample size and the nominal $\alpha$ or false positive rate (which determine $z_{crit}$). At this point, I encourage you to play around with [this](http://rpsychologist.com/d3/NHST/) very nice, interactive visualisation.</p>
+<h2>Computing Power</h2>
+<p>Visually, we need to find the area under the green curve that lies above $z_{crit}$. If we know the non-centrality parameter and thus the location of the green curve, we can easily calculate the statistical power.</p>
+<p>The non-centrality parameter, as hinted in the previous section, is a function only of the effect size and the sample size. We can specify the sample size ourselves, but only estimate the effect size, since the empirical effect size is not known. For a t-test,</p>
+<p>$ncp = \sqrt{\frac{n}{2}} * d$</p>
+<p>In the following calculations, we assume $\alpha = 0.05$ and a two-tailed t-test.</p>
+<pre class="theme:familiar toolbar:2 lang:r decode:true ">
+get_power <- function(d, n) {
+  df <- (n - 1) * 2
+  ncp <- sqrt(n / 2) * d
+  
+  zcrit <- qt(0.975, df = df)
+  beta <- pt(zcrit, df = df, ncp = ncp)
+  
+  1 - beta
+}
+
+get_power(d = 0.3, n = 30) # yeah, it is this low
+0.2069
+</pre>
+<h2>Implications of Low Power</h2>
+<p>An obvious implication of low power that it leads to increased Type II errors; that is we do not find effects even though they exist. An under-appreciated fact is that low power results in inflated effect sizes. To see this, let us run some simulations.</p>
+<pre class="theme:familiar toolbar:2 lang:r decode:true ">
+get_n <- function(d, power) {
+  n <- 5
+  while (power > get_power(d, n)) n <- n + 1
+  n
+}
+
+simulate <- function(d, power = 0.8, times = 1000, alpha = 1) {
+  result <- list(p = c(), d = c())
+  n <- ifelse(d == 0, 30, get_n(d, power))
+  
+  replicate(times, {
+    x1 <- rnorm(n, mean = d, sd = 1)
+    x2 <- rnorm(n, mean = 0, sd = 1)
+    test <- t.test(x1, x2)
+    diff <- test$estimate[[1]] - test$estimate[[2]]
+    
+    pval <- test$p.value
+    result$p <<- c(result$p, ifelse(pval > alpha, NA, pval))
+    result$d <<- c(result$d, ifelse(pval > alpha, NA, diff))
+  })
+  result
+}
+</pre>
+<p>The <strong>get_n</strong> function gives us the number of participants we have to test if we want to reach a certain level of statistical power, given a certain effect size. The <strong>simulate</strong> function per default runs 1000 t-tests powered at 0.8 for a given effect size d. It returns a list consisting of the test results (p-value and estimated difference between the groups). When alpha is 1, there is no publication bias.</p>
+<p>Let us make three comparisons:</p>
+<pre class="theme:familiar toolbar:2 lang:r decode:true ">
+# no publication bias
+unbiased <- simulate(d = 0.3)
+
+# publication bias at 0.05
+biased <- simulate(d = 0.3, alpha = 0.05)
+
+# publication bias and low power (as in real research)
+lowpower <- simulate(d = 0.3, alpha = 0.05, power = 0.3)
+</pre>
+<p>When there is no publication bias, we expect the simulated results to reflect the true effect size. When there is publication bias, we expect some inflation when we just average over the effect sizes (a crude meta-analysis, so to speak). However, what happens when the tests are low powered? Let's plot the results!</p>
+<pre class="theme:familiar toolbar:2 lang:r decode:true ">
+library('reshape2')
+
+dat <- data.frame(unbiased = unbiased$d, biased = biased$d, lowpower = lowpower$d)
+dat <- melt(dat)
+names(dat) <- c("type", "effect")
+ggplot(dat, aes(x = type, y = effect)) +
+      geom_boxplot(aes(fill = type), outlier.size = 2, outlier.shape = 21) +
+      labs(x = "type", y = "estimated effect size", title = "simulation results") +
+      ylim(0, 1) + theme_classic() + geom_hline(yintercept = 0.3, col = "red", linetype = 5)
+</pre>
+<p><a href="http://blog.efpsa.org/wp-content/uploads/2015/03/effect.png"><img src="{{ site.baseurl }}/assets/effect-300x241.png" alt="effect" width="300" height="241" class="alignnone size-medium wp-image-3376" /></a></p>
+<p>We see that that underpowered studies grossly inflate the effect size! This is easy to explain. When we have low power, we miss true positives. Stated differently, the critical value for our experiment to yield statistically significant results is too high. Thus when we find an effect size that reflects the true effect size, say d = 0.3, our statistical test will not be significant. It will only be significant when we - by chance - observe a much higher d; in the case of our simulations, d ~ 0.54.</p>
+<p>Low power is one of the main reasons for the <strong>voodoo correlations</strong> in neuroscience [@vul2009puzzlingly; @yarkoni2009big]. There is a simple formula that quantifies the probability that a <strong>statistically significant</strong> finding reflects a true effect [@ioannidis2005most]:</p>
+<p>$\text{PPV} = \frac{(1 - \beta)  \text{R}}{(1 - \beta)  \text{R} + \alpha}$</p>
+<p>where <strong>R</strong> are the pre-study odds that the effect exists.</p>
+<p>Formulating this in R, we get</p>
+<pre class="theme:familiar toolbar:2 lang:r decode:true ">
+ppv <- function(power, R, alpha = 0.05) (power * R) / (power * R + alpha)
+</pre>
+<p>One can argue that most studies in psychology are exploratory (even though reported as confirmatory, see u.a. @gelman2013garden). Thus the pre-study odds a rather small, say $\frac{1}{5}$. In addition to low power, this makes for a low positive predictive value:</p>
+<pre class="theme:familiar toolbar:2 lang:r decode:true ">
+ppv(0.3, 1/5)
+0.545454
+</pre>
+<p>A little more than half of the studies <strong>reporting true effects</strong> are wrong.</p>
+<h2>P-values and Power</h2>
+<p>The p-value is the probability of observing data this extreme or more extreme, given that the null hypothesis is true. If there is no true effect, p-values are uniformly distributed. We can see this also via simulations.</p>
+<pre class="theme:familiar toolbar:2 lang:r decode:true ">
+null <- simulate(d = 0, times = 10000)
+qplot(null$p, binwidth = 0.05) + theme_classic()
+</pre>
+<p><a href="http://blog.efpsa.org/wp-content/uploads/2015/03/uniform_pcurve.png"><img src="{{ site.baseurl }}/assets/uniform_pcurve-300x244.png" alt="uniform_pcurve" width="300" height="244" class="alignnone size-medium wp-image-3380" /></a></p>
+<p>By extension, all p-values < 0.05 are uniformly distributed as well. Because the p-values are uniformly distributed under the null, we <strong>cannot</strong> obtain evidence in favour of it. But more on that in the next section.</p>
+<p>If there is a true effect, the distribution of p-values is skewed.</p>
+<pre class="theme:familiar toolbar:2 lang:r decode:true ">
+effect <- simulate(d = 0.3, times = 10000)
+qplot(effect$p, xlim = c(0, 0.05)) + theme_classic()
+</pre>
+<p><a href="http://blog.efpsa.org/wp-content/uploads/2015/03/skewed_pcurve.png"><img src="{{ site.baseurl }}/assets/skewed_pcurve-300x244.png" alt="skewed_pcurve" width="300" height="244" class="alignnone size-medium wp-image-3381" /></a></p>
+<p>This skewness, as you might have guessed, is influenced by power. The higher the power of a studies the lower the p-value - given that the alternative hypothesis is true. Let's compare the distributions of p-values of studies powered at 30%, and studies powered at 90%.</p>
+<pre class="theme:familiar toolbar:2 lang:r decode:true ">
+library('gridExtra')
+
+effect30 <- simulate(d = 0.3, power = 0.3, times = 1000, alpha = 0.05)
+effect90 <- simulate(d = 0.3, power = 0.9, times = 1000, alpha = 0.05)
+
+p1 <- qplot(effect30$p, geom = "density", xlab = "p-value") + theme_classic()
+p2 <- qplot(effect90$p, geom = "density", xlab = "p-value") + theme_classic()
+grid.arrange(p1, p2)
+</pre>
+<p><a href="http://blog.efpsa.org/wp-content/uploads/2015/03/density.png"><img src="{{ site.baseurl }}/assets/density-300x240.png" alt="density" width="300" height="240" class="alignnone size-medium wp-image-3377" /></a><br />
+What if you run a high-powered experiment, say 90%, and it results in p = 0.028? This would still be below the conventional level of significance, but does it really merit rejection of the null hypothesis?</p>
+<p>Let's look at the proportion of p-values for which $0.02 <= p <= 0.03$</p>
+<pre class="theme:familiar toolbar:2 lang:r decode:true ">
+set.seed(1774)
+sim <- simulate(d = 0.3, power = 0.9, times = 1000)$p
+sim <- sim[sim <= 0.05]
+prop <- sum(sim[sim >= 0.02 & sim <= 0.03]) / length(sim)
+
+print(prop * 100)
+0.0818
+</pre>
+<p>The chance of getting a p-value within those bounds, given an effect of size 0.3 and power 0.9, is 0.082%. We know that under the null hypothesis each p-value is equally likely, so the probability of a p-value being within 0.02 and 0.03 is 1%. Thus getting $p = 0.028$ is $\frac{1}{0.082}$, that is 12.2, times more likely under $H_0$ than under $H_1$. Stated differently, even though $p < 0.05$, this does not yield support for $H_1$.</p>
+<h2>Power and $H_0$</h2>
+<p>Within the realm of Null Hypothesis Significance Testing, one cannot support the null hypothesis. As already demonstrated above, p-values are randomly distributed under $H_0$, independent of the sample size.</p>
+<p><strong>More will follow</strong></p>
+<h2>Summary</h2>
+<p>Power is a pre-experimental concept that averages over all possible experiments. High-powered experiments do not allow researchers to support $H_0$ [@wagenmakers2014power], but Bayesian statistics does [@rouder2009bayesian]. The average power of studies in psychology is about 30%, and even lower in neuroscience research [@button2013power]. This does not only lead to a high rate of false negatives, but also inflates the estimation of effect sizes [@vul2009puzzlingly; @yarkoni2009big] while reducing the probability that a significant result reflects a true positive [@ioannidis2005most].</p>
+<h2>FAQ</h2>
+<p>1) <strong>Question</strong>: In your simulation, why did you calculate a Welch t-test although you know that the variances are equal?<br />
+1) <strong>Answer</strong>: Excellent question! See [this](http://daniellakens.blogspot.nl/2015/01/always-use-welchs-t-test-instead-of.html)</p>
+<hr />
+<p>2) <strong>Question</strong>: You mentioned that with power equal to 50%, getting a significant result when the effect really exists is only a toin coss.<br />
+2) <strong>Answer</strong>: Yes, this is not quite true, since researchers can (consciously or unconciously) exploit their degrees of freedom not only in the amount of studies they run (publication bias), but also with respect to statistical decisions (see @simmons2011false; @gelman2013garden)</p>
+<hr />
+<p>3) <strong>Question</strong>: Even with 80% power, the PPV is only roughly 76%. This seems to be very saddening.<br />
+3) <strong>Answer</strong>: Don't be discouraged! In fact - even with enough power - this is to be expected. Science is a risky thing, and most hypothesis we have will be false [@ioannidis2005most]. This is also why we need **meta-analytic** thinking; no single study will be decisive - science is a collective endeavour.</p>
+<hr />
+<p>4) <strong>Question</strong>: Why do we settle for 80% power?<br />
+4) <strong>Answer</strong>: We should not, but time and ressources are precious. So precious, in fact, that most researchers settle for 30% power. If you don't have enough power, don't run the experiment. Simple (and hard) as that.</p>
+<hr />
+<p>5) <strong>Question</strong>: In the simulations, you ran thousands of tests without correcting the $\alpha$ level. What's up with that?<br />
+5) <strong>Answer</strong>: Note that in the simulations we know that there exists a true effect; thus false positives are not possible. Also, correcting for false positives (using Bonferroni, for example) greatly reduces power. In fact, running the effect size estimation using $\alpha = 0.001$ yields an inflated effect size of d ~ 0.76!</p>
+<hr />
+<p>7) <strong>Question</strong>: Why didn't you use the R package <strong>pwr</strong>?<br />
+7) <strong>Answer</strong>: I wanted to implement it ourselves, so we get a better understanding. Since knowing any three out of sample size, power, effect size or $\alpha$ allows you to estimate the other one, the <strong>pwr</strong> package does much more. It relies on <strong>uniroot</strong> to solve for the unknown one. For example, drawing from our power implementation above, we can write:</p>
+<pre class="theme:familiar toolbar:2 lang:r decode:true ">
+get_d <- function(n, power) {
+  fn <- function(d) {
+    df <- (n - 1) * 2
+    ncp <- sqrt(n / 2) * d
+    zcrit <- qt(0.975, df)
+    pwr <- 1 - pt(zcrit, df, ncp)
+    
+    pwr - power
+  }
+  uniroot(fn, c(0.001, 4))$root
+}
+</pre>
+<p><strong>uniroot</strong> minimizes the function, that is it chooses <strong>d</strong> such that the last expression in the function is zero. This corresponds to the effect size.</p>
+<pre class="theme:familiar toolbar:2 lang:r decode:true ">
+get_d(n = 30, power = 0.3)
+0.3768
+</pre>
+<hr />
+<p>6) <strong>Question</strong>: The null hypothesis makes perfect sense. How the heck can I support it?<br />
+6) <strong>Answer</strong>: Bayesian Statistics.</p>
+<hr />
+<h2>Suggested Reading</h2>
+<p>- @yarkoni2009big<br />
+- @button2013power<br />
+- @wagenmakers2014power<br />
+- @rouder2009bayesian<br />
+- @simonsohn2014p</p>
+<h2>References</h2>

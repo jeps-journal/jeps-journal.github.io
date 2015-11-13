@@ -1,0 +1,151 @@
+---
+layout: post
+title: ! 'Bayesian Statistics: What is it and Why do we Need it?'
+date: 2014-11-17 18:57:37.000000000 +01:00
+type: post
+published: true
+status: publish
+categories:
+- Discussion
+- How-to
+- Research Methodology
+tags: []
+meta:
+  _edit_last: '2710'
+  _syntaxhighlighter_encoded: '1'
+  editInHTML: 'off'
+  _post_restored_from: a:3:{s:20:"restored_revision_id";i:3001;s:16:"restored_by_user";i:24;s:13:"restored_time";i:1414522216;}
+  _wpas_done_all: '1'
+author:
+  login: Peter Edelsbrunner
+  email: peter.edelsbrunner@ifv.gess.ethz.ch
+  display_name: Peter Edelsbrunner
+  first_name: Peter
+  last_name: Edelsbrunner
+---
+<p><a href="http://blog.efpsa.org/wp-content/uploads/2014/11/prlipohell.jpg"><img class="wp-image-3047 size-thumbnail alignleft" src="{{ site.baseurl }}/assets/prlipohell-150x150.jpg" alt="prlipohell" width="150" height="150" /></a>There is a revolution in statistics happening: The Bayesian revolution. Psychology students who are interested in research methods (which I hope everyone is!) should know what this revolution is about. Gaining this knowledge now instead of later might spare you lots of misconceptions about statistics as it is usually instructed in psychology, and it might help you gain a deeper understanding of the foundations of statistics. To make sure that you can try out everything you learn immediately, I conducted analysis in the free statistics software <i>R</i> (<a href="http://www.r-project.org/">www.r-project.org</a>; click <a href="https://www.youtube.com/playlist?list=PLqzoL9-eJTNBDdKgJgJzaQcY6OXmsXAHU">HERE </a> for a tutorial how to get started with R, and install <a href="http://www.rstudio.com">RStudio</a> for an enhanced R-experience) and I provide the syntax for the analysis directly in the article so you can easily try them out. So let’s jump in: What is "Bayesian Statistics", and why do we need it?<!--more--></p>
+<h3>Frequentist vs. Bayesian Statistics: An Example</h3>
+<p>Psychology students are usually taught the traditional approach to statistics: Frequentist statistics. Assume, for instance, you want to test the hypothesis that people who wear fancy hats are more creative than people who do not wear hats or hats that look boring. You carefully choose a sample of 100 people who wear fancy hats and 100 people who do not wear fancy hats and you assess their creativity using psychometric tests.</p>
+<p>In R we can easily simulate data for this example; just copy this syntax into R and run it (everything with a # in front is an explaining comment that is not processed by R).</p>
+<p>[sourcecode language="R"]</p>
+<p>#First, set a seed first for the quasi-random number generation in our data simulation<br />
+#If you set the same number you will get exactly the same data as I<br />
+set.seed(666)</p>
+<p>##Prepare variables for data simulation<br />
+n1fh = 100 # Number of people wearing fancy hats<br />
+n2nfh = 100 # Number of people wearing no fancy hats<br />
+mu1 = 103 # Population mean of creativity for people wearing fancy hats<br />
+mu2 = 98 # Population mean of creativity for people wearing no fancy hats<br />
+sigma = 15 # Average population standard deviation of both groups<br />
+n = n1fh+n2nfh # Total sample size<br />
+##Generate the simulated data<br />
+y1 = rnorm(n1fh, mu1, sigma) # Data for people wearing fancy hats<br />
+y2 = rnorm(n2nfh, mu2, sigma) # Data for people wearing no fancy hats</p>
+<p>[/sourcecode]</p>
+<p>Let's look at the descriptive statistics for both groups.</p>
+<p>[sourcecode language="R"]</p>
+<p>mean(y1)<br />
+mean(y2)<br />
+sd(y1)<br />
+sd(y2)<br />
+mean(y1)-mean(y2) # Mean difference</p>
+<p>[/sourcecode]</p>
+<p>The mean values are <i>M</i>(fancy hat) = 102.00, <i>SD</i> = 15.44, and <i>M</i>(no fancy hat) = 96.61,<i> SD</i> = 17.03. Hence, the mean difference is 5.39. Let's further investigate the data in a box plot.</p>
+<p>[sourcecode language="R"]</p>
+<p>## Generate a boxplot to investigate the data<br />
+install.packages(&quot;ggplot2&quot;) # Install package for flexible graphics<br />
+library(&quot;ggplot2&quot;)<br />
+y = c(y2, y1) # Aggregate both data sets<br />
+x = rep(c(1,0), c(n1fh, n2nfh)) # Indicator for people wearing no fancy hats<br />
+boxplotframe = data.frame(Group=factor(x, labels = c(&quot;No Fancy Hat&quot;, &quot;Fancy Hat&quot;)), Creativity=y)<br />
+ggplot(boxplotframe) +<br />
+       geom_boxplot ((aes(y = Creativity, x = Group))) +<br />
+       labs(title= &quot;Box Plot of Creativity Values&quot;) +<br />
+       theme(text = element_text(size=15),<br />
+             panel.background = element_rect(fill = 'white', colour = 'black'))</p>
+<p>[/sourcecode]</p>
+<p><a href="http://blog.efpsa.org/wp-content/uploads/2014/10/3.png"><img class="alignnone size-full wp-image-2964" src="{{ site.baseurl }}/assets/3.png" alt="3" width="480" height="384" /></a></p>
+<p><span style="line-height: 1.5em;">From the boxplot it also seems that there might be a difference. How can you reliably test if this difference is not just present in your sample but indicates an actual difference for the two underlying populations of fancy hat-users and non-fancy hat-users?</span></p>
+<p><b>The frequentist way. </b>In your statistics class you learned that to compare the creativity of the two groups you should compute a "<i>t</i>-test for independent samples". You conduct this test in your favorite statistics software, R.</p>
+<p>[sourcecode language="R"]</p>
+<p>t.test(y1,y2, var.equal=TRUE) #Frequentist t-test<br />
+[/sourcecode]</p>
+<p>The result (as you would report it according to APA-guidelines) is <i>t</i><sub>198</sub> = 2.35, <i>p </i>= .020. In your statistics course you learned how to interpret this magical "<i>p</i>-value": "The probability of obtaining a group difference of the observed magnitude or larger, given the null hypothesis (that in the population there is no difference in the two groups’ creativity), is 2.0%". Now, because 2.0% is very unlikely (more unlikely than the usual, but arbitrary, cut-off of 5%), you reject the null hypothesis. You accept the alternative hypothesis which states that there is a difference in the two groups’ creativity. Since the mean value of people wearing fancy hats is higher, you conclude that people who wear fancy hats are more creative than people who do not wear fancy hats. Congratulations, hypothesis supported! But, wait, is it really that easy? Is there a different way to think about these data?</p>
+<p><b>The Bayesian way.    </b>A basic but effective way to conduct a t-test using Bayesian statistics is the <i>Bayes factor</i>. The Bayes factor represents the ratio of the likelihoods of the data given the null hypothesis versus the alternative hypothesis. In simpler words, it answers the question “How likely are my data if the creativity of the two groups differs, in comparison to how likely the data are if there is no difference?” We compute the Bayes factor for our example:</p>
+<p>[sourcecode language="R"]</p>
+<p>##Bayesian t-test: via Bayes factor<br />
+install.packages(&quot;BayesFactor&quot;) # Install BayesFactor-package<br />
+library('BayesFactor') # Load BayesFactor-package<br />
+yx = data.frame(y,x) # Prepare data<br />
+bf = ttestBF(formula = y ~ x, data=yx) # Estimate Bayes factor<br />
+bf # Investigate the result</p>
+<p>[/sourcecode]</p>
+<p>We yield a Bayes Factor of 1.98. This indicates that the data are 1.98 times more likely under the alternative hypothesis (that there is a difference) than under the null hypothesis (that there is no difference).</p>
+<p>Here comes the interpretative stunner: If you held even odds for both hypotheses beforehand, the Bayes factor can be interpreted as the posterior <a href="http://www.en.wikipedia.org/wiki/Odds#Statistical_usage">odds</a> for both hypotheses based on the data. Hence, if you did not have strong assumptions about the outcome before seeing the data, our posterior odds would now be 1.98:1 for the alternative hypothesis. You can now be a bit more confident that your assumption is true than before you collected the data.</p>
+<p><b>Receiving “Free Lunch” or not: A Comparison of the Foundations of the two Statistical Schools</b><b></b></p>
+<p>From the Bayesian analysis, we concluded that “the hypothesis that there is a difference between the two groups’ creativity is slightly favored over the hypothesis that there is no difference”. In comparison, from the frequentist analysis we concluded "the probability of obtaining a group difference of the observed magnitude or larger, given the null hypothesis (that in the population there is no difference in the two groups’ creativity) is 2.0%" - we rejected the null hypothesis and accepted the alternative hypothesis.</p>
+<p>From this comparison you can see that the Bayesian approach to statistics is more intuitive; it resembles how we think about probability in everyday life – in the odds of hypotheses, not those of data. In comparison, the frequentist conclusion sounds complex and difficult to comprehend. Where do these interpretational differences come from? To find out, let us compare the foundations of both schools.</p>
+<p><b>Frequentist principles.</b> In frequentist statistics, neither the rejected hypothesis (H0: There is no difference between the two groups) nor the accepted hypothesis (H1: There is a difference) are directly tested, but only the probability of the data. This has been compared to receiving free lunch: One does not state what the alternative hypothesis is but eventually one does accept it without testing it. This is like receiving lunch without paying (Rouder, Wagenmakers, Verhagen, &amp; Morey, submitted)! In other, more complex, but famous words:</p>
+<blockquote><p>"What the use of <i>p</i> implies is that a hypothesis that may be true may be rejected because it has not predicted observable results that have not occurred. This seems a remarkable procedure" (Harold Jeffreys, 1891-1989).</p></blockquote>
+<p>This ironical statement touches the fact that the <i>p</i>-value is the proportion of all possible samples one could assess that could be “at least as extreme” as the observed data if the null hypothesis is true. Hence, the rejection of the null hypothesis is based on the probability of samples that have not been observed.</p>
+<p><b>Bayesian principles: The Concept of the Bayesian Prior, Likelihood, and Posterior.</b> In Bayesian statistics, there is no “free lunch”; there are no conclusions about hypothesis that have not been tested or data that have not been observed: Rather, as in the Bayes factor example, probabilities of hypotheses can be directly tested and compared (Dienes, 2010).</p>
+<p>The Bayes theorem, the basic rule behind Bayesian statistics, states that the posterior (the probability of the hypothesis given the data) is proportional to the likelihood (the probability of the data given the hypothesis) times the prior (the probability of the hypothesis):</p>
+<p>Pr(<i>Hypothesis</i>|<i>Data</i>) ∝ Pr(<i>Data</i>|<i>Hypothesis</i>) Pr(<i>Hypothesis</i>)</p>
+<p>Hence, what a Bayesian analysis does is estimating how likely your hypothesis is, from your data, weighted a little bit with your assumptions. This “little bit” depends on the certainty of your assumptions: If you have strong assumptions and are quite sure about potential outcomes, you should specify an “informative” prior which will more strongly influence the result. Strong assumptions can for example be based on strong theory, or prior data that have been collected. If however your assumptions are weak, for example because you are the first to research a topic and there are no previous data available to base assumptions on, you should specify a “non-informative” prior which will only influence the result to a negligible extent.</p>
+<p>The prior is a critically discussed and for many people strange facet of Bayesian statistics. In Bayesian analysis, the prior is mixed with the data to yield the result. This means if two people have different assumptions about potential effects, they might specify different priors and hence yield different results from the same data. Is it legitimate that subjective assumptions influence the results of statistical analysis? Opponents of Bayesian statistics would argue that this inherent subjectivity renders Bayesian statistics a defective tool. Proponents however see priors as a means to improve parameter estimation, arguing that the prior does only weakly influence the result and emphasizing the possibility to specify non-informative priors that are as "objective" as possible (see Zyphur &amp; Oswald, in press).</p>
+<p>In Bayesian statistics there are three parts of an analysis: The prior, the likelihood, and the posterior. First, you specify the prior. As explained, the prior represents your assumptions about how large a potential difference between the two groups might be and how sure you are about it, translated into a statistical distribution. The likelihood are your data. In a Bayesian <i>t</i>-test these two, your assumptions and the data, are translated into the posterior. The posterior is your result, a statistical distribution that shows you the magnitude of the difference between the two groups (the mean or median of the distribution) and how sure you can be about the difference (the variance of the distribution). Let’s compute a Bayesian t-test and look at the posterior distribution. Due to huge computational complexity, a posterior distribution cannot be fully computed. Instead, we draw single values from the distribution many times. By summarizing and plotting the single draws we get a good approximation of what the distribution looks like.</p>
+<p>[sourcecode language="R"]</p>
+<p>##Bayesian t-test: via MCMC; draw from posterior distribution<br />
+#Let's set a seed first for the quasi-random number generation in our data simulation.<br />
+#If you set the same number you will get the same data as I<br />
+set.seed(666)<br />
+chains = posterior(bf, iterations = 10000) # Save 10000 draws from posterior<br />
+beta = chains[,2] # Save draws for mean difference<br />
+##Visualize posterior distribution for group mean difference in creativity<br />
+df = data.frame(beta)<br />
+hi = ggplot(df, aes(x=var1)) + geom_histogram(binwidth = .5, color = &quot;black&quot;, fill=&quot;white&quot;) +<br />
+labs(x = &quot;Estimated Mean Difference&quot;,<br />
+     y = &quot;Frequency&quot;,<br />
+     title = &quot;Distribution of Difference Parameter&quot;) +<br />
+theme(text = element_text(size=15),<br />
+     panel.background = element_rect(fill = 'white', color = 'black'))<br />
+hi # show histogram</p>
+<p>[/sourcecode]</p>
+<p><a href="http://blog.efpsa.org/wp-content/uploads/2014/10/2.png"><img class="alignnone size-full wp-image-2965" src="{{ site.baseurl }}/assets/2.png" alt="2" width="480" height="384" /></a></p>
+<p>As a point estimate of the group difference in creativity, we can use the mean value of the distribution.</p>
+<p>[sourcecode language="R"]</p>
+<p>mean(beta) # mean difference creativity score</p>
+<p>[/sourcecode]</p>
+<p>As a result, the estimated mean difference in the groups’ creativity is 5.06 points on the scale of the creativity-test.</p>
+<p><b>Further Advantages of Bayesian Statistics for Students’ and Researchers’ Everyday Life</b></p>
+<p>Apart from increased conceptual clarity, Bayesian statistics implies various further advantages over frequentist statistics.</p>
+<p><b>Alpha-adjustement. </b>In frequentist statistics, when someone conducts more than one analysis on the same data, they need to apply alpha-adjustment. This means that in order to avoid increased frequency of false rejections of the null hypothesis, data have to speak against the null more strongly in each additional analysis one applies.</p>
+<p>In comparison, in Bayesian testing there is no need for alpha adjustment (Dienes, 2011; Kruschke, 2010). One can conduct analysis on a data set and draw resulting inferences as many times as they want, without risking increased likelihood of false conclusions.</p>
+<p><b>Interpretation of confidence.</b> A common misconception about frequentist statistics concerns the interpretation of confidence intervals. Confidence intervals are used to depict how sure one can be about the estimate of an effect. For the difference in the two groups’ creativity, our frequentist t-test showed us a confidence interval of CI<sub>95</sub>[0.86, 9.92]. Many people, even experienced researchers, think of this as implying that we can be 95% sure that the true difference between the groups is in the range of 0.86 to 9.92 points. This and other misconceptions about confidence intervals are similar to misconceptions about <i>p</i> values, and they are common, even amongst experienced researchers (Hoekstra, R. D. Morey, Rouder, &amp; Wagenmakers, 2014). Indeed, the CI only tells us that “if we draw samples of this size many times, the real difference between the groups will be within the CI in 95% of cases”. Hence, the CI does not tell us anything tangible. Rather, the probability that the true difference lies within these borders is either 0 or 1, because it is either in there or not!</p>
+<p><b>            </b>The Bayesian equivalent to confidence intervals is the credibility interval (see Kruschke, 2010). We depict the credibility interval for our example.</p>
+<p>[sourcecode language="R"]</p>
+<p>##Credibility interval<br />
+CredInt = quantile(beta,c(0.025,0.975)) #Credibility interval for the difference between groups<br />
+CredInt<br />
+##Visualize credibility interval in the histogram<br />
+hi + geom_vline(xintercept=CredInt[1],color =&quot;green&quot;, linetype = &quot;longdash&quot;, size = 2) + #line at lower limit of credibility interval<br />
+  geom_vline(xintercept=CredInt[2],color =&quot;green&quot;, linetype = &quot;longdash&quot;, size = 2) + #line at upper limit of credibility interval<br />
+  geom_vline(xintercept=0, color =&quot;red&quot;, size = 2)  #line at zero difference</p>
+<p>[/sourcecode]</p>
+<p><a href="http://blog.efpsa.org/wp-content/uploads/2014/10/1.png"><img class="alignnone size-full wp-image-2966" src="{{ site.baseurl }}/assets/1.png" alt="1" width="480" height="384" /></a></p>
+<p>The figure depicts the Bayesian credibility interval (green lines) and the zero-difference location (red line). As depicted by the green lines, of the 1000 values that we drew from the posterior, 95% lie within 0.62 and 9.50. This is the credibility interval for the difference between the two groups’ creativity. In comparison to frequentist confidence intervals, the interpretation of this credibility interval is easy and intuitive: We can be 95% sure that the difference between the groups lies between 0.62 and 9.50 points on the scale of the creativity-test. Hence, while this interval is very similar to that from the frequentist analysis, it tells a different, more satisfying story.</p>
+<h3>Conclusion</h3>
+<p>A remark regarding Bayesian statistics remains: Some aspects of Bayesian analysis are complex. Recently, some good introductions to Bayesian analysis have been published. For example, Kruschke ( 2014) offers an accessible applied introduction into the matter. In addition, frequentist analysis can also be complex and difficult to comprehend. At least the analyzed model is always the same: There are no “Bayesian models” or “frequentist models” in statistics, but only different ways to analyze a model. Hence, in our example we analyzed the same t-test model twice, once using frequentist analysis and then using Bayesian analysis. Therefore, there is no reason to be daunted by “Bayesian models”, but as discussed there are many reasons to learn and enjoy Bayesian analysis!</p>
+<p>For more than 50 years Bayesian statistics has been advocated as the right way to go (for a classic account see Edwards, Lindman, &amp; Savage, 1963). The computational complexity of Bayesian statistics has been a major obstacle for its application. Modern computational power could overcome this issue several years ago but frequentist statistics used this time lag to burn into researchers’ minds. Hopefully, this introduction managed to free your mind and evoke your interest in Bayesian statistics. A good way to deepen your understanding is to engage in fruitful exchange with your colleagues, read into the suggested literature, and visit some courses. We are planning to provide you with further tutorials on Bayesian data analysis in the JEPS Bulletin, to support your change to the Bayesian side!</p>
+<h3>Suggested Readings</h3>
+<p>Dienes, Z. (2008). <i>Understanding psychology as a science: An introduction to scientific and statistical inference.</i> Basingstoke: Palgrave Macmillan.</p>
+<p>Kruschke, J. K. (2014). <i>Doing bayesian data analysis: A tutorial with R, JAGS, and Stan </i>(2nd ed.).  Academic Press.</p>
+<p>van de Schoot, R., Kaplan, D., Denissen, J., Asendorpf, J. B., Neyer, F. J., &amp; van Aken, M. A. (2013). A gentle introduction to Bayesian analysis: Applications to developmental research. <i>Child Development</i>, <i>85, </i>841-860. doi:10.1111/cdev.12169</p>
+<p align="center">References</p>
+<p>Dienes, Z. (2011). Bayesian versus orthodox statistics: which side are you on? <i>Perspectives</i><i> </i><i>on </i><i>Psychological Science</i>, <i>6</i>, 274–290. doi:10.1177/1745691611406920</p>
+<p>Edwards, W., Lindman, H., &amp; Savage, L. J. (1963). Bayesian statistical inference in psychological research. <i>Psychological Review</i>, <i>70</i>, 193–242. doi:10.1037/h0044139</p>
+<p>Hoekstra, R., Morey, R. D., Rouder, J. N., &amp; Wagenmakers, E.-J. (2014). Robust misinterpretation of confidence intervals. <i>Psychonomic Bulletin </i><i>&amp; </i><i>Review</i>, 1–8. doi:10.3758/s13423-013-0572-3</p>
+<p>Kruschke, J. K. (2010). Bayesian data analysis. <i>Wiley</i><i> </i><i>Interdisciplinary Reviews: Cognitive Science</i>, <i>1</i>, 658–676. doi:10.1002/wcs.72</p>
+<p>Kruschke, J. K. (2014). <i>Doing bayesian data analysis: A tutorial with R, JAGS, and Stan </i>(2nd ed.).  Academic Press.</p>
+<p>Rouder, J. N., Wagenmakers, E.-J., Verhagen, J., &amp; Morey, R. (submitted). The p &lt; .05 rule and the hidden costs of the free lunch in inference. Retrieved from http://pcl.missouri.edu/node/145</p>
+<p>Zyphur, M. J., &amp; Oswald, F. L. (in press). Bayesian estimation and inference: A user’s guide. <i>Journal of Management</i>. doi:10.1177/0149206313501200</p>

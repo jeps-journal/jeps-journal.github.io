@@ -1,0 +1,95 @@
+---
+layout: post
+title: How not to worry about APA style
+date: 2015-06-09 10:51:35.000000000 +02:00
+type: post
+published: true
+status: publish
+categories:
+- APA Guidelines
+- How-to
+- Publishing in scientific journals
+tags:
+- APA
+- tips
+- web resources
+meta:
+  _edit_last: '2710'
+  editInHTML: 'off'
+  _wpas_done_all: '1'
+author:
+  login: Frederik Aust
+  email: frederik.aust@uni-koeln.de
+  display_name: Frederik Aust
+  first_name: Frederik
+  last_name: Aust
+---
+<p>If you have gone through the trouble of picking up a copy of the <em>Publication Manual of the American Psychological Association</em> (APA, 2010), I’m sure your first reaction was similar to mine: “Ugh! 272 pages of boredom.” Do people actually read this monster? I don’t know. I don’t think so. I know I haven’t read every last bit of it. You may be relieved to hear that your reaction resonates with some of the critique that has been voiced by senior researchers in Psychology, such as Henry L. Roediger III <span class="citation">(2004)</span>. But let’s face it: APA style is not going anywhere. It is one of the major style regimes in academia and is used in many fields other than Psychology, including medical and other public health journals. And to be fair, standardizing academic documents is not a bad idea. It helps readers to efficiently access the desired information. It helps authors by making the journal's expectations regarding style explicit, and it helps reviewers to concentrate on the content of a manuscript. Most importantly, the guidelines set a standard that is accepted by a large number of outlets. Imagine a world in which you had to familiarize yourself with a different style every time you chose a new outlet for your scholarly work.<!--more--></p>
+<div id="apa-style-is-hard" class="section level1">
+<h1>APA style is hard</h1>
+<p>The data presented in <a href="http://blog.efpsa.org/2015/01/12/most-frequent-apa-mistakes-at-a-glance/">an earlier post</a> on this blog indicate that Psychology students find it difficult to adhere to the APA guidelines. Among the 9 most common mistakes in submissions to the <em>Journal of European Psychology Students</em> are</p>
+<ol>
+<li>missing or incorrect running head (86.3%)</li>
+<li>errors with in-text citations (84.0%)</li>
+<li>missing or incorrectly formatted page numbers (75.0%)</li>
+<li>incorrect margins (52.2%)</li>
+<li>indentation of first line of each paragraph (43.1%)</li>
+</ol>
+<p>From my experience as an editorial assistant at the journal <em>Experimental Psychology</em> I know that fully mastering APA style is hard even for more senior researchers — and that’s okay. In fact, I’m glad that most researchers use their limited time on research (or teaching) rather than memorizing the “Publication Manual”. Life is too short to learn the ins and outs of APA style.</p>
+</div>
+<div id="how-not-to-worry-about-apa-style" class="section level1">
+<h1>How not to worry about APA style</h1>
+<p>If you want to publish psychological research, you will have to produce properly formatted APA style manuscripts. Fortunately, this is a problem many researchers face; in other words, there is no reason to start from scratch. You could use an APA template for common word processors such as Microsoft Word or Libre Office that takes care of the page setup, line spacing, etc. But to be up-front, I want to convince you that there is a better way to write your manuscripts that prevents all of the above mentioned errors and more. I want to introduce you to <em>Markdown</em>, an easy-to-read and -write annotation system that makes writing APA style a breeze.</p>
+<div id="dont-mix-content-and-style" class="section level2">
+<h2>Don’t mix content and style</h2>
+<p>A general principle in typesetting — be it on (digital) paper or the web — is to separate content and style. Separation is commonly achieved through the use of a <em>markup language</em>, which is a system of document annotations. These annotations declare portions of text as title, section headings, or list items but crucially, they are agnostic to what this means visually (e.g., &lt;bold&gt;text&lt;/bold&gt; instead of <strong>text</strong>). There are several advantages to this approach but I’ll only briefly name three of them here:</p>
+<ol>
+<li><strong>Focus on writing.</strong> It seems that a common form of procrastination for many writers is making a document pretty. Adding a newline here or a manual line break there, moving a table just two pixels to the left, etc. When writing a markup document in a plain text document it let’s you focus on the content rather than the style.</li>
+<li><strong>Swiftly adjust the style.</strong> If your paper is rejected and the next target journal prefers a different flavor of APA style, there is no need to touch your writing. As a simple example, I recently submitted a paper to a journal that asked me to collect all figure captions at the end of the document on one page rather than printing them below the corresponding figures. Because my captions were declared as such, I left the text unchanged (captions below the figures) and simply changed the option controlling the captions’ position within the document.</li>
+<li><strong>Write plain text files.</strong> Once you move to writing in plain text files, you open yourself up to a whole new world of very helpful tools to facilitate your writing and collaboration, such as dynamic documents or the version control system <a href="http://en.wikipedia.org/wiki/Git_(software)">git</a>, but that’s a topic for another blog post.</li>
+</ol>
+</div>
+<div id="learn-markdown" class="section level2">
+<h2>Learn Markdown</h2>
+<p>Am I suggesting you replace one evil with another? Not learning APA style requires learning a whole new language? No, <a href="http://en.wikipedia.org/wiki/Markdown">Markdown</a> is intended to be as easy-to-read and easy-to-write as possible. The following is an excerpt from the APA example manuscript written in Markdown.</p>
+<pre title="Excerpt from the APA example manuscript in Markdown" class="font:ubuntu-mono font-size:14 line-height:18 toolbar-overlay:false wrap:true lang:default decode:true"># Methods
+## Participants
+Younger adults (14 women, 10 men, $M_{age} = 19.5$ years, age range: 18–22 years) were recruited with flyers posted on the Boston College campus. &lt;!-- Add flyer to appendix! --&gt;
+Older adults (15 women, nine men, $M_{age} = 76.1$ years, age range: 68–84 years) were recruited through the Harvard Cooperative on Aging (see Table 1, for demographics and test scores).[^p]
+
+[^p]: Analyses of covariance were conducted with these covariates, with no resulting influences of these variables on the pattern or magnitude of the results.</pre>
+<p>Without knowing anything about Markdown, it should be easy to guess what the annotations mean. <code>#</code> declare hierarchical section headings, <code>&lt;!--</code> and <code>--&gt;</code> envelope comments, and <code>[^p]</code> adds a reference to a footnote. As you can see, Markdown is easy to learn and will quickly save time in manuscript preparation. The only thing that may be scary at first are the equations enveloped by <code>$</code>. Equations are written in the powerful, yet, fairly simple equation syntax used in <a href="http://en.wikipedia.org/wiki/LaTeX">LaTeX</a>. Although LaTeX is widely used to write entire manuscripts (not just equations), it is not very popular in the field of Psychology. I suspect that the neglect is largely due to its complexity and long learning curve, which I find rather deterring myself. Both seem to outweigh the advantages of the system when it comes to handling citations and cross-references or typesetting large documents, complex tables, and equations which are rare in the average Psychology paper. That is why I like the idea of using Markdown as a simple interface to harness the power of LaTeX without having to write or know much about LaTeX.</p>
+</div>
+<div id="use-a-reference-manager" class="section level2">
+<h2>Use a reference manager</h2>
+<p>If you are not already using a reference manager such as <a href="https://www.zotero.org/">Zotero</a>, I strongly suggest you start doing so. Reference managers are like iTunes for your literature; they help you search, download, and organize papers. Most importantly, with a few clicks you can export a collection of references you need for a paper into a <code>.bib</code>-file. Once your references are in a <code>.bib</code>-file that resides in the same folder as your Markdown-file, you can easily add citations to your Markdown document. Each reference has a unique handle, e.g. <code>lewandowsky_computational_2011</code>, which you can use in Markdown. <code>@lewandowsky_computational_2011</code> creates an in-text citation; <code>[@lewandowsky_computational_2011]</code> creates a citation in parentheses. Everything reference-related, such as in-text citation and the reference section, will be taken cared of automatically.</p>
+</div>
+<div id="let-r-take-care-of-the-rest" class="section level2">
+<h2>Let R take care of the rest</h2>
+<p>To turn your Markdown file into a polished APA manuscript, you need to set a few options and then create a <code>.pdf</code>-file. Both could be done manually but the way I do this is by using the text editor <a href="http://www.rstudio.com/products/RStudio/">RStudio</a> (a text editor for <a href="http://www.r-project.org/">R</a>, but you literally need no knowledge about R to do this) and <a href="https://github.com/crsh/papaja">papaja</a>, the R package I’m developing with <a href="https://github.com/mariusbarth">Marius Barth</a>. In turning your Markdown into a <code>.pdf</code>-file there are intermediate steps and software involved that are really not important to know. RStudio lets you do all of this by the click of a button. As a side note, if you use R for your analyses, you can embed the analysis code into your document and insert statistics, figures, and tables on the fly while creating your manuscript. This is what is called a <a href="http://en.wikipedia.org/wiki/Living_document">dynamic document</a> <span class="citation">(Xie, 2013)</span> and the topic of a future blog post.</p>
+</div>
+</div>
+<div id="how-to-create-your-first-manuscript" class="section level1">
+<h1>How to create your first manuscript</h1>
+<div id="requirements" class="section level2">
+<h2>Requirements</h2>
+<p>If you want to try writing a manuscript in Markdown, you need to install a couple of things:</p>
+<ul>
+<li><a href="http://www.r-project.org/">R</a> (2.11.1 or later)</li>
+<li><a href="http://www.rstudio.com/">RStudio</a> (0.98.932 or later)</li>
+<li>A <a href="http://de.wikipedia.org/wiki/TeX">TeX</a> distribution (2013 or later; <a href="http://miktex.org/">MikTeX</a> for Windows, <a href="https://tug.org/mactex/">MacTeX</a> for Mac, or <a href="http://www.tug.org/texlive/">TeX Live</a> for Linux)</li>
+</ul>
+<p>Make sure you install the <em>complete</em>—not the basic—TeX version and if you are on Ubuntu 14.04 you need a couple of <a href="https://github.com/crsh/papaja#requirements">extra TeX packages</a>. Finally, install the development version of papaja by opening RStudio and copying the following into the R console:</p>
+<pre title="Install development version of papaja" class="font:ubuntu-mono font-size:14 line-height:18 lang:default decode:true">install.packages("devtools")
+devtools::install_github("crsh/papaja")</pre>
+<h2>New documents</h2>
+</div>
+<div id="new-documents" class="section level2">Once you installed papaja you can create an APA document through the menus in RStudio (<code>File &gt; New File &gt; R Markdown</code>). If you take the time to explore the menu a little bit you will find that Markdown can be used to create a range of different documents like slides or HTML-files. <a href="http://blog.efpsa.org/wp-content/uploads/2015/06/template_selection.png"><img class="aligncenter wp-image-3521 size-full" src="{{ site.baseurl }}/assets/template_selection.png" alt="template_selection" width="561" height="443" /></a> The new text file will contain a document header enveloped by <code>---</code> followed by the body of the text. There will be some scary looking R stuff following the header; feel free to delete all of it. To preview your manuscript click the <code>Knit</code>-Button. <a href="http://blog.efpsa.org/wp-content/uploads/2015/06/knitting.png"><img class="aligncenter wp-image-3520 size-full" src="{{ site.baseurl }}/assets/knitting.png" alt="knitting" width="523" height="220" /></a> If you click on the question mark next to it, you can get help regarding Markdown in case you get stuck. Also, a look at the <a href="https://github.com/crsh/papaja/tree/master/example">papaja-example document</a> may be helpful. All you need to do now is fill in the meta-information, e.g. authors, title, and abstract in the header of the document, start writing, and stop worrying about APA style.</p>
+<div class="references">
+<h1>References</h1>
+<p>American Psychological Association. (2010). <em>Publication Manual of the American Psychological Association</em> (6th edition.). Washington, DC: American Psychological Association.</p>
+<p>Roediger, H. L. (2004). What Should They Be Called? <em>APS Observer</em>, <em>17</em>(4). Retrieved from <a class="uri" href="http://journal.sjdm.org/roediger.html">http://journal.sjdm.org/roediger.html</a></p>
+<p>Xie, Y. (2013). <em>Dynamic Documents with R and knitr</em>. Boca Raton: Productivity.</p>
+</div>
+</div>
+</div>
