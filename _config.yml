@@ -4,7 +4,7 @@
 # baseurl is the website's URL without the hostname
 
 # If you are building a simple GitHub user page (username.github.io) then use these settings:
-url: "http://username.github.io"
+url: "http://jeps.efpsa.org"
 baseurl: ""
 
 # If you are building a GitHub project page then use these settings:
@@ -14,7 +14,7 @@ baseurl: ""
 # Of course don't forget to change the username and projectname to YOUR username and project
 
 # Name of website
-title: JEPS Bulletin
+title: Our Journal
 
 # Short description of your site
 description: A virtual proof that name is awesome!
@@ -29,6 +29,7 @@ description: A virtual proof that name is awesome!
 navbar-links:
   Home: ""
   About: "about"
+  Search: "search"
   Contribute: "contribute"
   
 # --- Footer options --- #
@@ -58,7 +59,7 @@ url-pretty: "jeps.efpsa.org"
 # --- Misc --- #
 
 # Fill in your Disqus shortname (NOT the userid) if you want to support Disqus comments
-#disqus: ""
+disqus: "jepsjournal"
 
 # Fill in your Google Analytics ID to track your website using GA
 #google_analytics: ""
@@ -94,6 +95,7 @@ exclude:
   - README.md
   - CNAME
   - Vagrantfile
+  - node_modules
 
 # prose.io config
 prose:

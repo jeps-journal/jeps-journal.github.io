@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Our Journal</title>
+
+  <meta name="author" content="JEPS Bulletin" />
+  
+  
+
+  <link rel="alternate" type="application/rss+xml" title="Our Journal - A virtual proof that name is awesome!" href="/feed.xml" />
+
+  
+    
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+    
+    
+  
+  
+    
+      <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    
+      <link rel="stylesheet" href="/css/main.css" />
+    
+  
+  
+  
+    
+	  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+    
+	  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+    
+  
+
+    
+  
+  
+  
+  
+  
+  <!-- Facebook OpenGraph tags -->
+  <meta property="og:title" content="Our Journal" />
+  <meta property="og:type" content="website" />
+  
+  
+  <meta property="og:url" content="http://jeps.efpsa.org/search.json" />
+  
+  
+  
+  <meta property="og:image" content="" />
+  
+  
+</head>
+
+
+  <body>
+  
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://jeps.efpsa.org">Our Journal</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+	    
+	      
+	      
+        <li>
+          
+          
+        	
+        
+          
+        
+
+	      <a href="/">Home</a>
+	      </li>
+	    
+	      
+	      
+        <li>
+          
+          
+        	
+        
+          
+        
+
+	      <a href="/about">About</a>
+	      </li>
+	    
+	      
+	      
+        <li>
+          
+          
+        	
+        
+          
+        
+
+	      <a href="/search">Search</a>
+	      </li>
+	    
+	      
+	      
+        <li>
+          
+          
+        	
+        
+          
+        
+
+	      <a href="/contribute">Contribute</a>
+	      </li>
+	    
+      </ul>
+    </div>
+	
+	
+	
+  </div>
+</nav>  
+
+
+    <div role="main" class="container main-content">
+      [
+
+{
+  "title"    : "Editors' Pick: Our Favourite Psychology and Neuroscience Podcasts",
+    "category" : "",
+    "tags"     : "web resources",
+    "url"      : "/2015-09-22-editors-pick-our-favourite-psychology-and-neuroscience-podcasts",
+    "date"     : "2015-09-22 03:55:17 -0700"
+} ,
+
+{
+  "title"    : "Introducing JASP: A free and intuitive statistics software that might finally replace SPSS",
+    "category" : "",
+    "tags"     : "Bayesian statistics, research methods, tips, web resources",
+    "url"      : "/2015-09-01-introducing-jasp-a-free-and-intuitive-statistics-software-that-might-finally-replace-spss",
+    "date"     : "2015-09-01 10:58:55 -0700"
+} ,
+
+{
+  "title"    : "Bayesian Statistics: Why and How",
+    "category" : "",
+    "tags"     : "Bayes, Bayesian statistics, introduction, practical, statistics",
+    "url"      : "/2015-08-03-bayesian-statistics-why-and-how",
+    "date"     : "2015-08-03 10:42:37 -0700"
+} ,
+
+{
+  "title"    : "How not to worry about APA style",
+    "category" : "",
+    "tags"     : "APA, tips, web resources",
+    "url"      : "/2015-06-09-how-not-to-worry-about-apa-style",
+    "date"     : "2015-06-09 01:51:35 -0700"
+} ,
+
+{
+  "title"    : "Of Elephants and Effect Sizes - Interview with Geoff Cumming",
+    "category" : "",
+    "tags"     : "research methods, statistics",
+    "url"      : "/2015-04-15-interview-with-geoff-cumming",
+    "date"     : "2015-04-15 11:49:00 -0700"
+} ,
+
+{
+  "title"    : "Interview with Prof. Dermot Barnes-Holmes",
+    "category" : "",
+    "tags"     : "",
+    "url"      : "/2015-04-06-interview-with-prof-barnes-holmes",
+    "date"     : "2015-04-06 08:38:24 -0700"
+} ,
+
+{
+  "title"    : "Interview with Prof. Alice Mado Proverbio",
+    "category" : "",
+    "tags"     : "",
+    "url"      : "/2015-03-30-interview-with-dr-proverbio",
+    "date"     : "2015-03-30 10:06:21 -0700"
+} ,
+
+{
+  "title"    : "Interview with Prof. Csikzentmihalyi",
+    "category" : "",
+    "tags"     : "",
+    "url"      : "/2015-03-23-interview-with-prof-csikzentmihalyi",
+    "date"     : "2015-03-23 12:59:02 -0700"
+} ,
+
+{
+  "title"    : "Interview with Dr. Deirdre Barrett",
+    "category" : "",
+    "tags"     : "",
+    "url"      : "/2015-03-16-interview-with-dr-deirdre-barrett",
+    "date"     : "2015-03-16 12:43:02 -0700"
+} ,
+
+{
+  "title"    : "Make the Most of Your Summer: Summer Schools in Europe",
+    "category" : "",
+    "tags"     : "",
+    "url"      : "/2015-03-09-make-the-most-of-your-summer-summer-schools-in-europe",
+    "date"     : "2015-03-09 01:00:50 -0700"
+} ,
+
+{
+  "title"    : "Answering Frequently Asked Questions about JEPS",
+    "category" : "",
+    "tags"     : "",
+    "url"      : "/2015-02-03-answering-frequently-asked-questions-about-jeps",
+    "date"     : "2015-02-03 11:41:47 -0800"
+} ,
+
+{
+  "title"    : "Most frequent APA mistakes at a glance",
+    "category" : "",
+    "tags"     : "APA, publishing in JEPS, scientific publishing",
+    "url"      : "/2015-01-12-most-frequent-apa-mistakes-at-a-glance",
+    "date"     : "2015-01-12 06:39:16 -0800"
+} ,
+
+{
+  "title"    : "First post!",
+    "category" : "",
+    "tags"     : "",
+    "url"      : "/2015-01-04-first-post",
+    "date"     : "2015-01-04 00:00:00 -0800"
+} ,
+
+{
+  "title"    : "A Psychologist’s Guide to Reading a Neuroimaging Paper",
+    "category" : "",
+    "tags"     : "",
+    "url"      : "/2014-12-17-a-psychologists-guide-to-reading-a-neuroimaging-paper",
+    "date"     : "2014-12-17 13:40:46 -0800"
+} ,
+
+{
+  "title"    : "Interview in Israel: with Prof. Daniel Brom",
+    "category" : "",
+    "tags"     : "",
+    "url"      : "/2014-12-12-interview-in-israel-with-prof-daniel-brom",
+    "date"     : "2014-12-12 00:56:45 -0800"
+} ,
+
+{
+  "title"    : "&quot;Set the default to 'Open'&quot; - Impressions from the OpenCon2014",
+    "category" : "",
+    "tags"     : "open access, OpenCon",
+    "url"      : "/2014-11-26-set-the-default-to-open",
+    "date"     : "2014-11-26 09:52:11 -0800"
+} ,
+
+{
+  "title"    : "Bayesian Statistics: What is it and Why do we Need it?",
+    "category" : "",
+    "tags"     : "",
+    "url"      : "/2014-11-17-bayesian-statistics-what-is-it-and-why-do-we-need-it-2",
+    "date"     : "2014-11-17 09:57:37 -0800"
+} ,
+
+{
+  "title"    : "Interview with Prof. David Barlow",
+    "category" : "",
+    "tags"     : "",
+    "url"      : "/2014-11-12-interview-with-prof-david-barlow",
+    "date"     : "2014-11-12 01:45:54 -0800"
+} ,
+
+{
+  "title"    : "Crowdsource your research with style",
+    "category" : "",
+    "tags"     : "",
+    "url"      : "/2014-10-27-crowdsource-your-research-with-style-2",
+    "date"     : "2014-10-27 00:47:46 -0700"
+} ,
+
+{
+  "title"    : "Interview with Prof. Nelson Cowan",
+    "category" : "",
+    "tags"     : "",
+    "url"      : "/2014-10-24-interview-with-prof-nelson-cowan",
+    "date"     : "2014-10-24 02:08:21 -0700"
+} ,
+
+{
+  "title"    : "Interview with Dr. David Klemanski",
+    "category" : "",
+    "tags"     : "",
+    "url"      : "/2014-10-21-interview-with-dr-david-klemanski",
+    "date"     : "2014-10-21 01:38:10 -0700"
+} ,
+
+{
+  "title"    : "Interview with Prof. Daniel Simons",
+    "category" : "",
+    "tags"     : "",
+    "url"      : "/2014-10-16-interview-with-prof-daniel-simons",
+    "date"     : "2014-10-16 11:03:09 -0700"
+} ,
+
+{
+  "title"    : "Interview with Prof. Ralph Hertwig",
+    "category" : "",
+    "tags"     : "",
+    "url"      : "/2014-10-13-interview-with-prof-ralph-hertwig",
+    "date"     : "2014-10-13 08:56:17 -0700"
+} ,
+
+{
+  "title"    : "Interview with Prof. Steven Luck",
+    "category" : "",
+    "tags"     : "",
+    "url"      : "/2014-10-07-interview-with-prof-luck",
+    "date"     : "2014-10-07 22:00:26 -0700"
+} ,
+
+{
+  "title"    : "Interview with Prof. Daniel Gilbert",
+    "category" : "",
+    "tags"     : "",
+    "url"      : "/2014-10-05-interview-with-prof-daniel-gilbert",
+    "date"     : "2014-10-05 21:00:02 -0700"
+} ,
+
+{
+  "title"    : "Ethics - The Science of Morals, Rules and Behaviour",
+    "category" : "",
+    "tags"     : "",
+    "url"      : "/2014-09-09-ethics",
+    "date"     : "2014-09-09 23:59:58 -0700"
+} ,
+
+{
+  "title"    : "''Writefull'' Can Help Your Academic Writing!",
+    "category" : "",
+    "tags"     : "academic writing, app, writefull, writing a paper",
+    "url"      : "/2014-04-15-writefull-can-help-your-academic-writing",
+    "date"     : "2014-04-15 00:00:19 -0700"
+} ,
+
+{
+  "title"    : "Engaging in a Research Project with an International Team – Opportunities and Problems",
+    "category" : "",
+    "tags"     : "collaboration, ess, international, open access, opportunities, problems, research",
+    "url"      : "/2014-03-30-engaging-in-a-research-project-with-an-international-team-opportunities-and-problems",
+    "date"     : "2014-03-30 07:47:50 -0700"
+} ,
+
+{
+  "title"    : "Why Would Researchers Skip Peer-Review? Media Reports of Unpublished Findings",
+    "category" : "",
+    "tags"     : "media, peer review, publishing, results",
+    "url"      : "/2014-03-15-why-would-researchers-skip-peer-review-media-reports-of-unpublished-findings",
+    "date"     : "2014-03-15 04:00:13 -0700"
+} ,
+
+{
+  "title"    : "Twitter in The University: How Using Twitter Can Benefit Students and Early Career Researchers",
+    "category" : "",
+    "tags"     : "publishing, research, twitter, university",
+    "url"      : "/2014-02-28-twitter-in-the-university-how-using-twitter-can-benefit-students-and-early-career-researchers",
+    "date"     : "2014-02-28 03:00:35 -0800"
+} ,
+
+{
+  "title"    : "Applying for a PhD in the UK in 387 easy steps",
+    "category" : "",
+    "tags"     : "Applying, Checklist, experience, funding, PhD, PhD Series, tips, UK",
+    "url"      : "/2014-02-15-applying-for-a-phd-in-the-uk-in-387-easy-steps-phd-series-i",
+    "date"     : "2014-02-15 07:45:16 -0800"
+} ,
+
+{
+  "title"    : "What Do Whigs Have To Do With History of Psychology?",
+    "category" : "",
+    "tags"     : "discussion, history",
+    "url"      : "/2014-01-30-what-do-whigs-have-to-do-with-history-of-psychology",
+    "date"     : "2014-01-30 03:00:52 -0800"
+} ,
+
+{
+  "title"    : "Collaborating With Researchers in Other Fields",
+    "category" : "",
+    "tags"     : "challenges, collaboration, interdisciplinary, neuroscience, scientific communication, teamwork",
+    "url"      : "/2014-01-15-collaborating-with-researchers-in-other-fields-perspectives",
+    "date"     : "2014-01-15 09:30:28 -0800"
+} ,
+
+{
+  "title"    : "The Best of JEPS Bulletin in 2013",
+    "category" : "",
+    "tags"     : "APA style, ethics, how to read an article, qualitative research, replication studies, visual methodologies",
+    "url"      : "/2013-12-26-the-best-of-jeps-bulletin-stories-in-2013",
+    "date"     : "2013-12-26 12:26:39 -0800"
+} ,
+
+{
+  "title"    : "Enunciation on Open Access: The practitioners' perspective",
+    "category" : "",
+    "tags"     : "advocating, debate, general practitioner, open access, view",
+    "url"      : "/2013-12-15-enunciation-on-open-access-the-practitioners-perspective",
+    "date"     : "2013-12-15 03:30:04 -0800"
+} ,
+
+{
+  "title"    : "Bias in Conducting Research: Guidelines for Young Researchers Regarding Gender Differences",
+    "category" : "",
+    "tags"     : "bias, effect size, gender, methodology, sex, statistics",
+    "url"      : "/2013-11-30-bias-in-conducting-research-guidelines-for-young-researchers-regarding-gender-differences",
+    "date"     : "2013-11-30 03:00:25 -0800"
+} ,
+
+{
+  "title"    : "How to Collect Data Effectively? An Overview of the Best Online Survey Providers",
+    "category" : "",
+    "tags"     : "comparison, data collection, data hosting, overview, survey, survey providers",
+    "url"      : "/2013-11-15-how-to-collect-data-effectively-an-overview-of-the-best-online-survey-providers",
+    "date"     : "2013-11-15 06:37:52 -0800"
+} ,
+
+{
+  "title"    : "Student Action for Open Access",
+    "category" : "",
+    "tags"     : "open access",
+    "url"      : "/2013-10-30-student-action-for-open-access",
+    "date"     : "2013-10-30 14:30:19 -0700"
+} ,
+
+{
+  "title"    : "Peer Review Process – Tips for Early Career Scientists",
+    "category" : "",
+    "tags"     : "guide, how to, journal, peer review, publishing, science",
+    "url"      : "/2013-10-15-peer-review-process-tips-for-early-career-scientists",
+    "date"     : "2013-10-15 09:46:31 -0700"
+} ,
+
+{
+  "title"    : "Are the Methods of Psychology to Blame for its Unscientific Image? The Basis of Public Perceptions of 'Scientific' Research",
+    "category" : "",
+    "tags"     : "research, research findings, research methods, scientific image",
+    "url"      : "/2013-09-30-2036",
+    "date"     : "2013-09-30 03:00:56 -0700"
+} ,
+
+{
+  "title"    : "Looking for New Contributors",
+    "category" : "",
+    "tags"     : "call for contributors",
+    "url"      : "/2013-09-23-looking-for-new-contributors",
+    "date"     : "2013-09-23 11:11:03 -0700"
+} ,
+
+{
+  "title"    : "The Impostor Syndrome",
+    "category" : "",
+    "tags"     : "academia, career, impostor, research, success, syndrome",
+    "url"      : "/2013-09-15-2000",
+    "date"     : "2013-09-15 03:15:00 -0700"
+} ,
+
+{
+  "title"    : "Crowdsourcing (Gathering Data Online): Cutting Cost &amp; Time",
+    "category" : "",
+    "tags"     : "crowdsourcing, data collection, MTurk",
+    "url"      : "/2013-08-30-crowdsourcing-gathering-data-online-cutting-cost-time",
+    "date"     : "2013-08-30 06:30:17 -0700"
+} ,
+
+{
+  "title"    : "APA’s Five General Principles of Ethics: How Do They Matter to an Aspiring Scientist",
+    "category" : "",
+    "tags"     : "",
+    "url"      : "/2013-08-15-apas-five-general-principles-of-ethics",
+    "date"     : "2013-08-15 06:15:33 -0700"
+} ,
+
+{
+  "title"    : "Hunting For Significant Results: Don't Do It",
+    "category" : "",
+    "tags"     : "advice on scientific writing, p value, quantitative, research purpose, significance, statistics",
+    "url"      : "/2013-07-30-hunting-for-significant-results-dont-do-it",
+    "date"     : "2013-07-30 13:23:38 -0700"
+} ,
+
+{
+  "title"    : "Why meta-analysis? A guide through basic steps and common biases",
+    "category" : "",
+    "tags"     : "academic writing, date, making sense, meta-analysis, sources, writing a paper",
+    "url"      : "/2013-07-15-meta-analysis",
+    "date"     : "2013-07-15 12:44:15 -0700"
+} ,
+
+{
+  "title"    : "Social Sciences: Academia &amp; Industry - On the Edge of Two Worlds",
+    "category" : "",
+    "tags"     : "academia, business, experience, industry, social sciences",
+    "url"      : "/2013-06-30-social-sciences-academia-industry-on-the-edge-of-two-worlds",
+    "date"     : "2013-06-30 03:00:55 -0700"
+} ,
+
+{
+  "title"    : "On the Importance of Behavioural Research",
+    "category" : "",
+    "tags"     : "behavioural research, philosophy of science, Relational Frame Theory",
+    "url"      : "/2013-06-14-on-the-importance-of-behavioural-research",
+    "date"     : "2013-06-14 23:01:35 -0700"
+} ,
+
+{
+  "title"    : "How to Design Effective Figures for Journal Articles",
+    "category" : "",
+    "tags"     : "advice on scientific writing, formatting figures, Formatting tables, presenting results, quantitative research",
+    "url"      : "/2013-05-29-how-to-design-effective-figures-for-journal-articles-2",
+    "date"     : "2013-05-29 15:00:02 -0700"
+} ,
+
+{
+  "title"    : "A Change of View: Using Visual Methods to Explore Experience in Qualitative Research",
+    "category" : "",
+    "tags"     : "graphic elicitation, qualitative research, visual methodologies, visual methods",
+    "url"      : "/2013-05-14-a-change-of-view-using-visual-methods-to-explore-experience-in-qualitative-research",
+    "date"     : "2013-05-14 23:00:41 -0700"
+} ,
+
+{
+  "title"    : "The Origins and Purpose of Scientific Publications",
+    "category" : "",
+    "tags"     : "history of science, journal article, scientific communication, scientific publishing",
+    "url"      : "/2013-04-29-the-origins-of-scientific-publishing",
+    "date"     : "2013-04-29 23:00:44 -0700"
+} ,
+
+{
+  "title"    : "Confessions of a Research Blog Editor",
+    "category" : "",
+    "tags"     : "JEPS Bulletin, knowledge sharing, research, research findings",
+    "url"      : "/2013-04-14-confessions-of-a-research-blog-editor",
+    "date"     : "2013-04-14 23:00:36 -0700"
+} ,
+
+{
+  "title"    : "Unpaid Psychology Positions - A Graduate's Perspective",
+    "category" : "",
+    "tags"     : "diversity, internship, psychology graduate, unpaid, volunteer",
+    "url"      : "/2013-03-30-unpaid-psychology-positions-a-graduates-perspective",
+    "date"     : "2013-03-30 00:00:04 -0700"
+} ,
+
+{
+  "title"    : "Why Are Most Research Findings Incorrect?",
+    "category" : "",
+    "tags"     : "common mistakes, Daryl J. Bem, publication bias",
+    "url"      : "/2013-03-14-why-are-most-research-findings-incorrect",
+    "date"     : "2013-03-14 22:35:03 -0700"
+} ,
+
+{
+  "title"    : "How to Read and Get the Most Out of a Journal Article",
+    "category" : "",
+    "tags"     : "effective reading, journal article, literature review",
+    "url"      : "/2013-02-27-how-to-read-and-get-the-most-out-of-a-journal-article",
+    "date"     : "2013-02-27 23:00:17 -0800"
+} ,
+
+{
+  "title"    : "My Experience in Publishing in an APA Journal",
+    "category" : "",
+    "tags"     : "advice on scientific writing, how to in APA, journal publishers in psychology, open access, review process",
+    "url"      : "/2013-02-15-my-experience-in-publishing-in-an-apa-journal",
+    "date"     : "2013-02-15 03:52:21 -0800"
+} ,
+
+{
+  "title"    : "Replication Studies: It’s Time to Clean Up Your Act, Psychologists!",
+    "category" : "",
+    "tags"     : "false positives, null, original, publication bias, replication, significance, undergraduate research project",
+    "url"      : "/2013-01-29-replication-studies-its-time-to-clean-up-your-act-psychologists",
+    "date"     : "2013-01-29 21:40:30 -0800"
+} ,
+
+{
+  "title"    : "What Are The Most Common APA Style Mistakes Done By Students?",
+    "category" : "",
+    "tags"     : "Abstract, APA style, citations, common mistakes, references",
+    "url"      : "/2013-01-14-what-are-the-most-common-apa-style-mistakes-done-by-students",
+    "date"     : "2013-01-14 23:00:19 -0800"
+} ,
+
+{
+  "title"    : "Say again?: Scientific writing and publishing in non-English speaking countries",
+    "category" : "",
+    "tags"     : "English, English-speaking scientific community, international scientific language, multilingual publications, non-English speaking scientific community",
+    "url"      : "/2012-12-30-say-again-scientific-writing-and-publishing-in-non-english-speaking-countries",
+    "date"     : "2012-12-30 02:09:34 -0800"
+} ,
+
+{
+  "title"    : "Research Proposal: Behind-the-Scenes Exclusive",
+    "category" : "",
+    "tags"     : "funding, literature review, research proposal, supervisor, time planning, tips",
+    "url"      : "/2012-12-14-research-proposal-behind-the-scenes-exclusive",
+    "date"     : "2012-12-14 22:45:19 -0800"
+} ,
+
+{
+  "title"    : "Advice for the Next Generation of Researchers in Psychology from an Experienced Editor",
+    "category" : "",
+    "tags"     : "advice on scientific writing, journal publishers in psychology, scientific writing style",
+    "url"      : "/2012-11-29-advice-for-the-next-generation-of-researchers-in-psychology-from-an-experienced-editor",
+    "date"     : "2012-11-29 20:02:31 -0800"
+} ,
+
+{
+  "title"    : "The structure of an APA research paper",
+    "category" : "",
+    "tags"     : "advice on scientific writing, APA, how to in APA",
+    "url"      : "/2012-11-14-1397",
+    "date"     : "2012-11-14 21:30:00 -0800"
+} ,
+
+{
+  "title"    : "Life is a box of chocolates",
+    "category" : "",
+    "tags"     : "confidence, interview, opinion, research assistant",
+    "url"      : "/2012-10-19-life-is-a-box-of-chocolates",
+    "date"     : "2012-10-19 23:00:34 -0700"
+} ,
+
+{
+  "title"    : "Keep calm and be creative: Use mixed methods!",
+    "category" : "",
+    "tags"     : "content analysis, mixed method, qualitative, quantitative, statistics, thematic analysis",
+    "url"      : "/2012-10-09-keep-calm-and-be-creative-use-mixed-methods",
+    "date"     : "2012-10-09 23:30:10 -0700"
+} ,
+
+{
+  "title"    : "The state of Open Access in Europe - Horizon 2020",
+    "category" : "",
+    "tags"     : "Elsevier, Horizon 2020, open access, Right to Research Coalition",
+    "url"      : "/2012-09-30-the-state-of-open-access-in-europe-horizon-2020",
+    "date"     : "2012-09-30 22:00:09 -0700"
+} ,
+
+{
+  "title"    : "The journey towards discovering people: Why I love qualitative research",
+    "category" : "",
+    "tags"     : "ADHD, cancer, general practitioner, probes, qualitative research, semi-structured interview",
+    "url"      : "/2012-09-19-the-journey-of-discovering-people-why-i-love-qualitative-research",
+    "date"     : "2012-09-19 23:30:02 -0700"
+} ,
+
+{
+  "title"    : "What makes a good research question?",
+    "category" : "",
+    "tags"     : "advice on scientific writing, choosing research topic, research question, tips",
+    "url"      : "/2012-09-09-what-makes-a-good-research-question",
+    "date"     : "2012-09-09 23:30:56 -0700"
+} ,
+
+{
+  "title"    : "How to write a good title for journal articles",
+    "category" : "",
+    "tags"     : "Abstract, APA, how to in APA",
+    "url"      : "/2012-08-31-how-to-write-a-good-title-for-journal-articles",
+    "date"     : "2012-08-31 22:36:05 -0700"
+} ,
+
+{
+  "title"    : "The state of Open Access in Europe - Right to Research Coalition",
+    "category" : "",
+    "tags"     : "open access, Right to Research Coalition",
+    "url"      : "/2012-08-19-the-state-of-open-access-in-europe-right-to-research-coalition",
+    "date"     : "2012-08-19 23:00:32 -0700"
+} ,
+
+{
+  "title"    : "The transformation of science",
+    "category" : "",
+    "tags"     : "scientific writing style",
+    "url"      : "/2012-08-09-has-science-changed",
+    "date"     : "2012-08-09 15:33:23 -0700"
+} ,
+
+{
+  "title"    : "The State of Open Access in Europe - Finch Report",
+    "category" : "",
+    "tags"     : "finch report, open access, Right to Research Coalition",
+    "url"      : "/2012-07-31-the-state-of-open-access-in-europe",
+    "date"     : "2012-07-31 19:00:15 -0700"
+} ,
+
+{
+  "title"    : "How to be an academic rock star via poster presentation",
+    "category" : "",
+    "tags"     : "making presentations, poster",
+    "url"      : "/2012-07-19-how-to-make-your-research-as-exciting-as-a-u2-concert-a-k-a-how-to-be-an-academic-rock-star",
+    "date"     : "2012-07-19 23:02:32 -0700"
+} ,
+
+{
+  "title"    : "The origins of APA style (and why there are so many rules)",
+    "category" : "",
+    "tags"     : "advice on scientific writing, APA history, Formatting tables, how to in APA",
+    "url"      : "/2012-07-09-the-origins-of-apa-style-and-why-there-are-so-many-rules",
+    "date"     : "2012-07-09 23:30:35 -0700"
+} ,
+
+{
+  "title"    : "Evaluating qualitative research: Are we judging by the wrong standards?",
+    "category" : "",
+    "tags"     : "coherence, commitment to rigour, evaluative criteria, impact factor, publication bias, qualitative research, quantitative, reliability, replicability, sensitivity to context, transparency, validity",
+    "url"      : "/2012-06-30-evaluating-qualitative-research",
+    "date"     : "2012-06-30 23:30:34 -0700"
+} ,
+
+{
+  "title"    : "Maximizing research impact",
+    "category" : "",
+    "tags"     : "impact factor, journal publishers in psychology",
+    "url"      : "/2012-06-19-maximizing-research-impact",
+    "date"     : "2012-06-19 15:15:20 -0700"
+} ,
+
+{
+  "title"    : "Self-archiving and psychology journals",
+    "category" : "",
+    "tags"     : "APA, Elsevier, impact factor, journal publishers in psychology, open access",
+    "url"      : "/2012-06-09-self-archiving-and-psychology-journals",
+    "date"     : "2012-06-09 22:30:17 -0700"
+} ,
+
+{
+  "title"    : "Bias in psychology: Bring in all significant results",
+    "category" : "",
+    "tags"     : "Daryl J. Bem, file-drawer problem, journal publishers in psychology, publication bias",
+    "url"      : "/2012-05-31-falsification-of-previous-results",
+    "date"     : "2012-05-31 22:39:37 -0700"
+} ,
+
+{
+  "title"    : "Is qualitative research still considered the poor relation?",
+    "category" : "",
+    "tags"     : "choosing research topic, evaluative criteria, mixed methods, publication bias, qualitative, quantitative, research methods",
+    "url"      : "/2012-05-19-is-qualitative-research-still-considered-the-poor-relation",
+    "date"     : "2012-05-19 23:00:45 -0700"
+} ,
+
+{
+  "title"    : "Research oriented social networking?",
+    "category" : "",
+    "tags"     : "Access to databases, literature search, research social networking, web resources",
+    "url"      : "/2012-05-09-research-oriented-social-networking",
+    "date"     : "2012-05-09 21:35:11 -0700"
+} ,
+
+{
+  "title"    : "Podcast with Nick Shockey: Open Access and psychology students",
+    "category" : "",
+    "tags"     : "Nick Shockey, open access, Right to Research Coalition",
+    "url"      : "/2012-04-30-podcast-with-nick-shockey-open-access-and-psychology-students",
+    "date"     : "2012-04-30 15:45:55 -0700"
+} ,
+
+{
+  "title"    : "Managing and organising literature",
+    "category" : "",
+    "tags"     : "literature review, literature search, managing literature, tips, web resources",
+    "url"      : "/2012-04-19-managing-and-organising-literature",
+    "date"     : "2012-04-19 15:20:08 -0700"
+} ,
+
+{
+  "title"    : "Tips for effective literature search",
+    "category" : "",
+    "tags"     : "advice on scientific writing, literature search, tips, web resources",
+    "url"      : "/2012-04-09-tips-for-effective-literature-search",
+    "date"     : "2012-04-09 15:01:17 -0700"
+} ,
+
+{
+  "title"    : "Scaring European developments threaten Open Access",
+    "category" : "",
+    "tags"     : "acta, Elsevier, funny, open access, sopa",
+    "url"      : "/2012-03-31-scaring-european-developments-threathen-open-access",
+    "date"     : "2012-03-31 20:56:51 -0700"
+} ,
+
+{
+  "title"    : "The implications of bite-size science",
+    "category" : "",
+    "tags"     : "bite-size articles, impact factor, publication bias, review process",
+    "url"      : "/2012-03-19-the-implications-of-bite-size-science",
+    "date"     : "2012-03-19 16:30:22 -0700"
+} ,
+
+{
+  "title"    : "APA Style: Abbreviations",
+    "category" : "",
+    "tags"     : "abbreviations, advice on scientific writing, how to in APA",
+    "url"      : "/2012-03-09-what-lies-behind-those-various-apa-abbreviations",
+    "date"     : "2012-03-09 18:02:20 -0800"
+} ,
+
+{
+  "title"    : "In the shoes of a peer-reviewer",
+    "category" : "",
+    "tags"     : "advice on scientific writing, publishing in JEPS, review process, scientific writing style, tips",
+    "url"      : "/2012-02-29-in-the-shoes-of-a-peer-reviewer",
+    "date"     : "2012-02-29 15:01:45 -0800"
+} ,
+
+{
+  "title"    : "ACTA, SOPA, PIPA, RWA and what do they have to do with psychologists",
+    "category" : "",
+    "tags"     : "Access to databases, acta, journal publishers in psychology, open access, pipa, sopa, web resources",
+    "url"      : "/2012-02-19-acta-sopa-pipa-rwa-and-what-do-they-have-to-do-with-us",
+    "date"     : "2012-02-19 15:01:25 -0800"
+} ,
+
+{
+  "title"    : "A revolution in scientific publishing?",
+    "category" : "",
+    "tags"     : "Elsevier, journal publishers in psychology, open access",
+    "url"      : "/2012-02-09-a-revolution-in-scientific-publishing",
+    "date"     : "2012-02-09 16:21:19 -0800"
+} ,
+
+{
+  "title"    : "Perfect references in no time: An introduction to free referencing software",
+    "category" : "",
+    "tags"     : "advice on scientific writing, APA, common mistakes, how to in APA, references, tips, web resources",
+    "url"      : "/2012-01-31-perfect-references-in-no-time-an-introduction-to-open-source-referencing-software",
+    "date"     : "2012-01-31 16:57:30 -0800"
+} ,
+
+{
+  "title"    : "APA style: How to format the references list?",
+    "category" : "",
+    "tags"     : "common mistakes, how to in APA, references",
+    "url"      : "/2012-01-19-814",
+    "date"     : "2012-01-19 15:07:32 -0800"
+} ,
+
+{
+  "title"    : "Journals in Psychology",
+    "category" : "",
+    "tags"     : "APA, journal publishers in psychology, publishing in JEPS, review process, web resources",
+    "url"      : "/2012-01-09-journals-in-psychology",
+    "date"     : "2012-01-09 15:50:49 -0800"
+} ,
+
+{
+  "title"    : "What happens to studies that accept the null hypothesis?",
+    "category" : "",
+    "tags"     : "Daryl J. Bem, file-drawer problem, publication bias, review process",
+    "url"      : "/2011-12-31-what-happens-to-studies-that-accept-the-null-hypothesis",
+    "date"     : "2011-12-31 15:01:34 -0800"
+} ,
+
+{
+  "title"    : "How to format headings in APA Style?",
+    "category" : "",
+    "tags"     : "Abstract, common mistakes, headings, how to in APA, introduction, references, tips",
+    "url"      : "/2011-12-19-how-to-format-headings-in-apa-style",
+    "date"     : "2011-12-19 15:01:03 -0800"
+} ,
+
+{
+  "title"    : "How to search for literature?",
+    "category" : "",
+    "tags"     : "Access to databases, advice on scientific writing, choosing research topic, literature review, literature search, tips, web resources",
+    "url"      : "/2011-12-09-how-to-search-for-literature",
+    "date"     : "2011-12-09 17:07:30 -0800"
+} ,
+
+{
+  "title"    : "Research as an international project",
+    "category" : "",
+    "tags"     : "tips, web resources",
+    "url"      : "/2011-11-30-research-as-an-international-project",
+    "date"     : "2011-11-30 16:46:21 -0800"
+} ,
+
+{
+  "title"    : "Common mistakes made in APA style",
+    "category" : "",
+    "tags"     : "Abstract, APA, common mistakes, DOI, Formatting tables, grammar, how to in APA, publishing in JEPS, scientific writing style, tips, web resources",
+    "url"      : "/2011-11-19-common-mistakes-made-in-apa-style",
+    "date"     : "2011-11-19 15:01:25 -0800"
+} ,
+
+{
+  "title"    : "Who publishes the most reputable journals in psychology?",
+    "category" : "",
+    "tags"     : "APA, impact factor, journal publishers in psychology, open access, web resources",
+    "url"      : "/2011-11-09-who-publishes-the-most-reputable-journals-in-psychology",
+    "date"     : "2011-11-09 15:01:06 -0800"
+} ,
+
+{
+  "title"    : "Lessons from a published fake study",
+    "category" : "",
+    "tags"     : "advice on scientific writing, common mistakes, review process, tips",
+    "url"      : "/2011-11-01-lessons-from-a-fake-study",
+    "date"     : "2011-11-01 02:17:59 -0700"
+} ,
+
+{
+  "title"    : "Open Access Week 2011",
+    "category" : "",
+    "tags"     : "open access, web resources",
+    "url"      : "/2011-10-19-open-access-week-2011",
+    "date"     : "2011-10-19 15:05:49 -0700"
+} ,
+
+{
+  "title"    : "How to spice up your presentations",
+    "category" : "",
+    "tags"     : "making presentations, Prezi, statistics, tips, web resources",
+    "url"      : "/2011-10-09-how-to-spice-up-your-presentations",
+    "date"     : "2011-10-09 15:01:26 -0700"
+} ,
+
+{
+  "title"    : "What makes a presentation good?",
+    "category" : "",
+    "tags"     : "making presentations, statistics, tips",
+    "url"      : "/2011-09-30-551",
+    "date"     : "2011-09-30 15:01:01 -0700"
+} ,
+
+{
+  "title"    : "Written by the hands of a ghost",
+    "category" : "",
+    "tags"     : "Ghost-writing",
+    "url"      : "/2011-09-19-521",
+    "date"     : "2011-09-19 15:01:53 -0700"
+} ,
+
+{
+  "title"    : "Tomatoes against procrastination",
+    "category" : "",
+    "tags"     : "advice on scientific writing, pomodoro technique, procrastination, tips",
+    "url"      : "/2011-09-09-tomatoes-against-procrastination",
+    "date"     : "2011-09-09 15:01:40 -0700"
+} ,
+
+{
+  "title"    : "APA supporting Open Access?",
+    "category" : "",
+    "tags"     : "open access, review process",
+    "url"      : "/2011-09-01-apa-supporting-open-access",
+    "date"     : "2011-09-01 00:34:17 -0700"
+} ,
+
+{
+  "title"    : "How to critically evaluate internet-based sources?",
+    "category" : "",
+    "tags"     : "literature search, tips, web resources",
+    "url"      : "/2011-08-20-how-to-critically-evaluate-internet-based-sources",
+    "date"     : "2011-08-20 01:00:07 -0700"
+} ,
+
+{
+  "title"    : "Lost in translating?",
+    "category" : "",
+    "tags"     : "advice on scientific writing, grammar, linguee, tips, translating, web resources",
+    "url"      : "/2011-08-09-lost-in-translating",
+    "date"     : "2011-08-09 15:01:34 -0700"
+} ,
+
+{
+  "title"    : "How to critically evaluate the quality of a research article?",
+    "category" : "",
+    "tags"     : "literature review, literature search, review process, scientific writing style, tips",
+    "url"      : "/2011-07-31-how-to-critically-evaluate-the-quality-of-a-research-article",
+    "date"     : "2011-07-31 15:01:30 -0700"
+} ,
+
+{
+  "title"    : "How to write a good literature review article?",
+    "category" : "",
+    "tags"     : "advice on scientific writing, literature review, literature search, tips",
+    "url"      : "/2011-07-19-how-to-write-a-good-literature-review-article",
+    "date"     : "2011-07-19 15:01:47 -0700"
+} ,
+
+{
+  "title"    : "Tips to find a good research topic",
+    "category" : "",
+    "tags"     : "advice on scientific writing, choosing research topic, tips",
+    "url"      : "/2011-07-09-on-a-mission-to-find-a-good-topic-research-topic",
+    "date"     : "2011-07-09 15:01:20 -0700"
+} ,
+
+{
+  "title"    : "When statistics doesn't go as planned...",
+    "category" : "",
+    "tags"     : "funny, statistics, xkcd",
+    "url"      : "/2011-06-30-when-statistics-doesnt-go-as-planned",
+    "date"     : "2011-06-30 15:01:45 -0700"
+} ,
+
+{
+  "title"    : "Table formatting according to APA",
+    "category" : "",
+    "tags"     : "Formatting tables, how to in APA, tips",
+    "url"      : "/2011-06-19-table-formatting-according-to-apa",
+    "date"     : "2011-06-19 16:00:57 -0700"
+} ,
+
+{
+  "title"    : "Can you find an article in 5 sec? The world of DOIs",
+    "category" : "",
+    "tags"     : "DOI, literature search, tips",
+    "url"      : "/2011-06-10-can-you-find-an-article-in-5-sec-the-world-of-dois",
+    "date"     : "2011-06-10 01:53:59 -0700"
+} ,
+
+{
+  "title"    : "How to make (scientific) texts sound professional?",
+    "category" : "",
+    "tags"     : "advice on scientific writing, common mistakes, grammar, scientific writing style, tips",
+    "url"      : "/2011-06-01-how-to-write-easy-to-read-scientific-texts",
+    "date"     : "2011-06-01 03:22:40 -0700"
+} ,
+
+{
+  "title"    : "Open Access basics",
+    "category" : "",
+    "tags"     : "Access to databases, open access",
+    "url"      : "/2011-05-14-open-access-basics",
+    "date"     : "2011-05-14 23:00:38 -0700"
+} ,
+
+{
+  "title"    : "Tips on bypassing restricted access to journal articles",
+    "category" : "",
+    "tags"     : "Access to databases, literature search, open access, tips",
+    "url"      : "/2011-04-30-tips-on-bypassing-restricted-access-to-journal-articles",
+    "date"     : "2011-04-30 18:56:21 -0700"
+} ,
+
+{
+  "title"    : "The core features of the scientific writing style II",
+    "category" : "",
+    "tags"     : "abbreviations, advice on scientific writing, tips, verbs",
+    "url"      : "/2011-04-15-the-core-features-of-the-scientific-writing-style-ii",
+    "date"     : "2011-04-15 05:58:43 -0700"
+} ,
+
+{
+  "title"    : "Online resources: APA Style and formatting",
+    "category" : "",
+    "tags"     : "advice on scientific writing, how to in APA, tips",
+    "url"      : "/2011-03-31-apa-online-resources",
+    "date"     : "2011-03-31 16:46:09 -0700"
+} ,
+
+{
+  "title"    : "The core features of the scientific writing style",
+    "category" : "",
+    "tags"     : "advice on scientific writing, tips",
+    "url"      : "/2011-03-14-the-core-features-of-the-scientific-writing-style",
+    "date"     : "2011-03-14 17:52:49 -0700"
+} ,
+
+{
+  "title"    : "How much do You know about plagiarism?",
+    "category" : "",
+    "tags"     : "advice on scientific writing, common mistakes, how to in APA, Karl-Theodor zu Guttenberg, Plagiarism, tips",
+    "url"      : "/2011-03-01-how-much-do-you-know-about-plagiarism",
+    "date"     : "2011-03-01 03:37:26 -0800"
+} ,
+
+{
+  "title"    : "The ‘science’ in scientific peer-reviewed journals",
+    "category" : "",
+    "tags"     : "Daryl J. Bem, review process",
+    "url"      : "/2011-02-14-the-science-in-scientific-peer-reviewed-journals",
+    "date"     : "2011-02-14 23:15:52 -0800"
+} ,
+
+{
+  "title"    : "How to write a brilliant abstract?",
+    "category" : "",
+    "tags"     : "Abstract, advice on scientific writing, how to in APA, tips",
+    "url"      : "/2011-02-01-how-to-write-a-brilliant-abstract",
+    "date"     : "2011-02-01 06:36:07 -0800"
+} ,
+
+{
+  "title"    : "Editorial perspective on scientific writing: An interview with Dr. Renata Franc",
+    "category" : "",
+    "tags"     : "advice on scientific writing, Renata Franc",
+    "url"      : "/2011-01-01-editorial-perspective-on-scientific-writing-an-interview-with-renata-franc",
+    "date"     : "2011-01-01 00:11:19 -0800"
+} ,
+
+{
+  "title"    : "How to avoid mistakes in APA Style?",
+    "category" : "",
+    "tags"     : "common mistakes, how to in APA, publishing in JEPS, tips",
+    "url"      : "/2010-12-14-common-mistakes-in-manuscripts-submitted-to-jeps",
+    "date"     : "2010-12-14 21:51:18 -0800"
+} ,
+
+{
+  "title"    : "What is Open Access Publishing about? An Interview with Martin Uhl",
+    "category" : "",
+    "tags"     : "Martin Uhl, open access",
+    "url"      : "/2010-11-30-what-is-open-access-publishing-about-an-interview-with-martin-uhl",
+    "date"     : "2010-11-30 22:37:58 -0800"
+} 
+
+]
+
+    </div>
+
+    <footer>
+  <div class="container beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          <li>
+            <a href="https://www.facebook.com/efpsa.jeps" title="Facebook">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+		  
+          <li>
+            <a href="https://twitter.com/efpsa_jeps" title="Twitter">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+		  
+          <li>
+            <a href="mailto:journal@efpsa.com" title="Email me">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+		  
+		  
+		  		  
+        </ul>
+        <p class="copyright text-muted">
+		  JEPS Bulletin
+		  &nbsp;&bull;&nbsp;
+		  2015
+		  
+		  
+		  &nbsp;&bull;&nbsp;
+		  <a href="http://jeps.efpsa.org">jeps.efpsa.org</a>
+		  
+	    </p>
+	        <!-- Please don't remove this, keep my open source work credited :) -->
+		<p class="theme-by text-muted">
+		  Theme by
+		  <a href="http://deanattali.com/beautiful-jekyll/">beautiful-jekyll</a>
+		</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  
+    
+
+
+  
+	<script src="/js/jquery-1.11.2.min.js"></script>
+  
+	<script src="/js/bootstrap.min.js"></script>
+  
+	<script src="/js/main.js"></script>
+  
+
+
+
+
+
+
+
+  
+  </body>
+</html>
