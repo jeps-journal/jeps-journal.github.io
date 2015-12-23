@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JEPS Bulletin</title>
+    <description>A virtual proof that name is awesome!</description>
+    <link>http://username.github.io</link>
+    <atom:link href="http://username.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+        <title>Editors' Pick: Our Favourite Psychology and Neuroscience Podcasts</title>
+        <description>
+          
+          As students of psychology, we are accustomed to poring through journal articles and course-approved textbooks to stay up-to-date on the latest developments in the field. While these resources are the cornerstones of scientific research, there are myriad other ways to enhance our understanding of our chosen disciplines – namely through...
+        </description>
+        <pubDate>Tue, 22 Sep 2015 03:55:17 -0700</pubDate>
+        <link>http://username.github.io/2015-09-22-editors-pick-our-favourite-psychology-and-neuroscience-podcasts</link>
+        <guid isPermaLink="true">http://username.github.io/2015-09-22-editors-pick-our-favourite-psychology-and-neuroscience-podcasts</guid>
+      </item>
+    
+      <item>
+        <title>Introducing JASP: A free and intuitive statistics software that might finally replace SPSS</title>
+        <description>
+          
+          Are you tired of SPSS’s confusing menus and of the ugly tables it generates? Are you annoyed by having statistical software only at university computers? Would you like to use advanced techniques such as Bayesian statistics, but you lack the time to learn a programming language (like R or Python) because...
+        </description>
+        <pubDate>Tue, 01 Sep 2015 10:58:55 -0700</pubDate>
+        <link>http://username.github.io/2015-09-01-introducing-jasp-a-free-and-intuitive-statistics-software-that-might-finally-replace-spss</link>
+        <guid isPermaLink="true">http://username.github.io/2015-09-01-introducing-jasp-a-free-and-intuitive-statistics-software-that-might-finally-replace-spss</guid>
+      </item>
+    
+      <item>
+        <title>Bayesian Statistics: Why and How</title>
+        <description>
+          
+          Bayesian statistics is what all the cool kids are talking about these days. Upon closer inspection, this does not come as a surprise. In contrast to classical statistics, Bayesian inference is principled, coherent, unbiased, and addresses an important question in science: in which of my hypothesis should I believe in,...
+        </description>
+        <pubDate>Mon, 03 Aug 2015 10:42:37 -0700</pubDate>
+        <link>http://username.github.io/2015-08-03-bayesian-statistics-why-and-how</link>
+        <guid isPermaLink="true">http://username.github.io/2015-08-03-bayesian-statistics-why-and-how</guid>
+      </item>
+    
+      <item>
+        <title>How not to worry about APA style</title>
+        <description>
+          
+          If you have gone through the trouble of picking up a copy of the Publication Manual of the American Psychological Association (APA, 2010), I’m sure your first reaction was similar to mine: “Ugh! 272 pages of boredom.” Do people actually read this monster? I don’t know. I don’t think so....
+        </description>
+        <pubDate>Tue, 09 Jun 2015 01:51:35 -0700</pubDate>
+        <link>http://username.github.io/2015-06-09-how-not-to-worry-about-apa-style</link>
+        <guid isPermaLink="true">http://username.github.io/2015-06-09-how-not-to-worry-about-apa-style</guid>
+      </item>
+    
+      <item>
+        <title>Of Elephants and Effect Sizes - Interview with Geoff Cumming</title>
+        <description>
+          
+          We all know these crucial moments while analysing our hard-earned data - the moment of truth - is there a star above the small p? Maybe even two? Can you write a nice and simple paper or do you have to bend your back to explain why people do not,...
+        </description>
+        <pubDate>Wed, 15 Apr 2015 11:49:00 -0700</pubDate>
+        <link>http://username.github.io/2015-04-15-interview-with-geoff-cumming</link>
+        <guid isPermaLink="true">http://username.github.io/2015-04-15-interview-with-geoff-cumming</guid>
+      </item>
+    
+      <item>
+        <title>Interview with Prof. Dermot Barnes-Holmes</title>
+        <description>
+          
+          &amp;nbsp; Prof. Dermot Barnes-Holmes was a Foundation Professor at the Department of Psychology at National University of Ireland, Maynooth. He is known for his research in human language and cognition through the development of the Relational Frame Theory (RFT) with Steven C. Hayes, and its applications in various psychological settings....
+        </description>
+        <pubDate>Mon, 06 Apr 2015 08:38:24 -0700</pubDate>
+        <link>http://username.github.io/2015-04-06-interview-with-prof-barnes-holmes</link>
+        <guid isPermaLink="true">http://username.github.io/2015-04-06-interview-with-prof-barnes-holmes</guid>
+      </item>
+    
+      <item>
+        <title>Interview with Prof. Alice Mado Proverbio</title>
+        <description>
+          
+          Prof. Alice Mado Proverbio has a degree in Experimental Psychology from the University of Rome “La Sapienza” and a PhD in General Psychology from the University of Padua. She did her Post Doctoral training at the University of California at Davis and at the University of Padua. As a research scientist at the...
+        </description>
+        <pubDate>Mon, 30 Mar 2015 10:06:21 -0700</pubDate>
+        <link>http://username.github.io/2015-03-30-interview-with-dr-proverbio</link>
+        <guid isPermaLink="true">http://username.github.io/2015-03-30-interview-with-dr-proverbio</guid>
+      </item>
+    
+      <item>
+        <title>Interview with Prof. Csikzentmihalyi</title>
+        <description>
+          
+          &amp;nbsp; Prof. Mihaly Csikszentmihalyi is the Distinguished Professor of Psychology and Management at Claremont Graduate University and was the former head of the department of psychology at the University of Chicago. He is noted for his research on happiness and creativity, on which he published over 120 scientific articles and book chapters. He...
+        </description>
+        <pubDate>Mon, 23 Mar 2015 12:59:02 -0700</pubDate>
+        <link>http://username.github.io/2015-03-23-interview-with-prof-csikzentmihalyi</link>
+        <guid isPermaLink="true">http://username.github.io/2015-03-23-interview-with-prof-csikzentmihalyi</guid>
+      </item>
+    
+      <item>
+        <title>Interview with Dr. Deirdre Barrett</title>
+        <description>
+          
+          Dr. Deirdre Barret is a researcher and lecturer at Harvard Medical School. She is well known for her research on dreams, hypnosis, and imagery. More recently she has written about evolutionary psychology and technology. She has also written severa successful books for the general public. What I enjoy most about my job...
+        </description>
+        <pubDate>Mon, 16 Mar 2015 12:43:02 -0700</pubDate>
+        <link>http://username.github.io/2015-03-16-interview-with-dr-deirdre-barrett</link>
+        <guid isPermaLink="true">http://username.github.io/2015-03-16-interview-with-dr-deirdre-barrett</guid>
+      </item>
+    
+      <item>
+        <title>Make the Most of Your Summer: Summer Schools in Europe</title>
+        <description>
+          
+          Why should you attend Summer Schools? To put it simply: there is no better way to learn about psychology (and related disciplines), to travel, and to meet new people, all at the same time! Summer schools offer the opportunity to explore areas of psychology that might not be taught at...
+        </description>
+        <pubDate>Mon, 09 Mar 2015 01:00:50 -0700</pubDate>
+        <link>http://username.github.io/2015-03-09-make-the-most-of-your-summer-summer-schools-in-europe</link>
+        <guid isPermaLink="true">http://username.github.io/2015-03-09-make-the-most-of-your-summer-summer-schools-in-europe</guid>
+      </item>
+    
+      <item>
+        <title>Answering Frequently Asked Questions about JEPS</title>
+        <description>
+          
+          Is there anything you ever wanted to know about JEPS and the people behind it? Here are answers to our ten most frequently asked questions.  Who are we? We are students from all over Europe and, as Editorial Team of the Journal of European Psychology Students (check out our Website here),...
+        </description>
+        <pubDate>Tue, 03 Feb 2015 11:41:47 -0800</pubDate>
+        <link>http://username.github.io/2015-02-03-answering-frequently-asked-questions-about-jeps</link>
+        <guid isPermaLink="true">http://username.github.io/2015-02-03-answering-frequently-asked-questions-about-jeps</guid>
+      </item>
+    
+      <item>
+        <title>Most frequent APA mistakes at a glance</title>
+        <description>
+          
+          APA-guidelines, don’t we all love them? As an example, take one simple black line used to separate words - the hyphen: not only do you have to check whether a term needs a hyphen or a blank space will suffice, you also have to think about the different types of...
+        </description>
+        <pubDate>Mon, 12 Jan 2015 06:39:16 -0800</pubDate>
+        <link>http://username.github.io/2015-01-12-most-frequent-apa-mistakes-at-a-glance</link>
+        <guid isPermaLink="true">http://username.github.io/2015-01-12-most-frequent-apa-mistakes-at-a-glance</guid>
+      </item>
+    
+      <item>
+        <title>First post!</title>
+        <description>
+          
+          This is my first post, how exciting!
+
+        </description>
+        <pubDate>Sun, 04 Jan 2015 00:00:00 -0800</pubDate>
+        <link>http://username.github.io/2015-01-04-first-post</link>
+        <guid isPermaLink="true">http://username.github.io/2015-01-04-first-post</guid>
+      </item>
+    
+      <item>
+        <title>A Psychologist’s Guide to Reading a Neuroimaging Paper</title>
+        <description>
+          
+          Psychological research is benefiting from advances in neuroimaging techniques. This has been achieved through the validation and falsification of established hypothesis in psychological science (Cacioppo, Berntson, &amp;amp; Nusbaum, 2008). It has also helped nurture links with neuroscience, leading to more comprehensive explanations of established theories. Positron Emission Tomography (PET), functional...
+        </description>
+        <pubDate>Wed, 17 Dec 2014 13:40:46 -0800</pubDate>
+        <link>http://username.github.io/2014-12-17-a-psychologists-guide-to-reading-a-neuroimaging-paper</link>
+        <guid isPermaLink="true">http://username.github.io/2014-12-17-a-psychologists-guide-to-reading-a-neuroimaging-paper</guid>
+      </item>
+    
+      <item>
+        <title>Interview in Israel: with Prof. Daniel Brom</title>
+        <description>
+          
+          Prof. Danny Brom is a clinical psychologist, the initiator of the Israel Trauma Coalition, and the Founding Director of the Israel Center for the Treatment of Psychotrauma in Jerusalem. Prof. Brom has published his first controlled outcome study on short-term therapy for Post Traumatic Stress Disorder in 1989, and has since published...
+        </description>
+        <pubDate>Fri, 12 Dec 2014 00:56:45 -0800</pubDate>
+        <link>http://username.github.io/2014-12-12-interview-in-israel-with-prof-daniel-brom</link>
+        <guid isPermaLink="true">http://username.github.io/2014-12-12-interview-in-israel-with-prof-daniel-brom</guid>
+      </item>
+    
+      <item>
+        <title>&quot;Set the default to 'Open'&quot; - Impressions from the OpenCon2014</title>
+        <description>
+          
+          In November 2014, 150 early-career researchers and students met in Washington D.C. for OpenCon, organized by the Right to Research Coalition, to talk about the movement to open science up - be it through Open Access to published literature, Open Data, or Open Educational Resources. The three day event offered...
+        </description>
+        <pubDate>Wed, 26 Nov 2014 09:52:11 -0800</pubDate>
+        <link>http://username.github.io/2014-11-26-set-the-default-to-open</link>
+        <guid isPermaLink="true">http://username.github.io/2014-11-26-set-the-default-to-open</guid>
+      </item>
+    
+      <item>
+        <title>Bayesian Statistics: What is it and Why do we Need it?</title>
+        <description>
+          
+          There is a revolution in statistics happening: The Bayesian revolution. Psychology students who are interested in research methods (which I hope everyone is!) should know what this revolution is about. Gaining this knowledge now instead of later might spare you lots of misconceptions about statistics as it is usually instructed in...
+        </description>
+        <pubDate>Mon, 17 Nov 2014 09:57:37 -0800</pubDate>
+        <link>http://username.github.io/2014-11-17-bayesian-statistics-what-is-it-and-why-do-we-need-it-2</link>
+        <guid isPermaLink="true">http://username.github.io/2014-11-17-bayesian-statistics-what-is-it-and-why-do-we-need-it-2</guid>
+      </item>
+    
+      <item>
+        <title>Interview with Prof. David Barlow</title>
+        <description>
+          
+          Prof. Barlow is a professor of Psychology and Psychiatry at Boston University and founder of  Center for Anxiety and Related Disorders. His research focuses on understanding the nature of anxiety and depression and developing new treatments for emotional disorders. He also developed the Transdiagnostic Treatment of Emotional Disorders.  What I enjoy most about my job...
+        </description>
+        <pubDate>Wed, 12 Nov 2014 01:45:54 -0800</pubDate>
+        <link>http://username.github.io/2014-11-12-interview-with-prof-david-barlow</link>
+        <guid isPermaLink="true">http://username.github.io/2014-11-12-interview-with-prof-david-barlow</guid>
+      </item>
+    
+      <item>
+        <title>Crowdsource your research with style</title>
+        <description>
+          
+          Would you like to collect data quick and efficiently? Would you like to have a sample that generalizes beyond western, educated, industrialized, rich and democratic participants? While you acknowledge social media as a powerful means to distribute your studies, you feel that there must be a “better way”? Then this...
+        </description>
+        <pubDate>Mon, 27 Oct 2014 00:47:46 -0700</pubDate>
+        <link>http://username.github.io/2014-10-27-crowdsource-your-research-with-style-2</link>
+        <guid isPermaLink="true">http://username.github.io/2014-10-27-crowdsource-your-research-with-style-2</guid>
+      </item>
+    
+      <item>
+        <title>Interview with Prof. Nelson Cowan</title>
+        <description>
+          
+          Nelson Cowan is a Curators' Professor of Psychology at the University of Missouri. His research focuses on short-term memory, working memory and selective attention in information processing. Amongst other findings, Cowan is well known for bringing the working memory capacity down from Millers magical 7+/-2 items to a more realistic 3-4 items....
+        </description>
+        <pubDate>Fri, 24 Oct 2014 02:08:21 -0700</pubDate>
+        <link>http://username.github.io/2014-10-24-interview-with-prof-nelson-cowan</link>
+        <guid isPermaLink="true">http://username.github.io/2014-10-24-interview-with-prof-nelson-cowan</guid>
+      </item>
+    
+  </channel>
+</rss>
