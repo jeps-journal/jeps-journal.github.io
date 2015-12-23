@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About JEPS
+title: Search
 ---
 
 <!-- Html Elements for Search -->
@@ -10,4 +10,4 @@ title: About JEPS
 </div>
 
 <!-- Script pointing to jekyll-search.js -->
-<script src="{{ site.baseurl }}/node_modules/simple-jekyll-search/dest/jekyll-search.js" type="text/javascript"></script>
+<script src="{{ site.baseurl }}/jekyll-search.min.js" type="text/javascript"></script>
